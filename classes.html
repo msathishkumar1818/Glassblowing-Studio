@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLASSES &amp; WORKSHOPS — Hands-on Hot Shop Glassblowing Experiences</title>
+  <meta name="description" content="Learn the authentic art of glassblowing from Master Gaffers in our San Francisco hot shop. Beginner half-day workshops, multi-day masterclasses, and private atelier sessions in an ethereal lavender and mauve studio.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primaryLavender: '#9B91CA',
+            deepMauve: '#7A6986',
+            softPurple: '#AB95CF',
+            dustyRose: '#B992A5',
+            blushPink: '#E1C5D4',
+            softLilac: '#C3A9D0',
+            lightMauve: '#CAAED2',
+            softRose: '#CEA3B2',
+            offWhite: '#F3E9F1',
+            darkBg: '#18131F',
+            darkSurface: '#221B2B',
+            darkElevated: '#2D2338',
+            // Token mappings
+            fire: '#9B91CA',
+            amber: '#AB95CF',
+            charcoal: '#18131F',
+            cream: '#F3E9F1',
+            glassBlue: '#C3A9D0'
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'Cormorant Garamond', 'serif'],
+            editorial: ['Cormorant Garamond', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'Outfit', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Favicon / Title Icon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#F7F3F7] text-[#18131F] dark:text-[#FFFFFF] dark:bg-[#18131F] dark:text-[#FFFFFF] antialiased transition-colors duration-300">
+
+  <!-- ========================================================================
+       PAGE LOADER
+       ======================================================================== -->
+  <div id="page-loader" role="status" aria-label="Loading Workshops Schedule">
+    <div class="flex flex-col items-center space-y-4">
+      <div class="relative w-16 h-16">
+        <div class="absolute inset-0 rounded-full border-2 border-[#9B91CA]/30 animate-ping"></div>
+        <div class="w-16 h-16 rounded-full border-2 border-t-[#9B91CA] border-r-[#AB95CF] border-b-transparent border-l-transparent animate-spin"></div>
+        <div class="absolute inset-3 bg-[#9B91CA] rounded-full animate-pulse-glow"></div>
+      </div>
+      <span class="font-serif-title text-xs tracking-widest text-[#C4BAFA] uppercase">Preparing Hot Shop Benches...</span>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       HEADER — SIX PAGE NAVIGATION + HOME DROPDOWN + RTL/DARK CONTROLS
+       ======================================================================== -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#F7F3F7]/90 dark:bg-[#18131F]/90 backdrop-blur-md border-b border-[#9B91CA]/15 dark:border-[#C3A9D0]/10 transition-colors duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 flex-nowrap gap-2">
+        
+        <!-- Brand Logo -->
+        <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 group focus:outline-none shrink-0 whitespace-nowrap" aria-label="Glassblowing Studio Home">
+          <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-[#9B91CA] to-[#AB95CF] flex items-center justify-center text-white shadow-lg group-hover:scale-105 transition-transform shrink-0">
+            <svg class="w-4 h-4 text-white animate-pulse" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="brand-logo-title font-serif-title font-bold text-sm sm:text-base tracking-widest text-[#18131F] dark:text-[#FFFFFF] uppercase leading-none">GLASSBLOWING</span>
+            <span class="brand-logo-sub text-[9px] tracking-[0.25em] text-[#7A6986] dark:text-[#C4BAFA] uppercase font-semibold">STUDIO • ATELIER</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation (Strict Single Line) -->
+        <nav class="hidden lg:flex items-center space-x-3.5 xl:space-x-5 rtl:space-x-reverse shrink-0 whitespace-nowrap" aria-label="Main Navigation">
+          <div class="relative">
+            <button id="home-dropdown-btn" type="button" class="nav-link flex items-center gap-1 text-[11px] xl:text-xs uppercase tracking-wider font-semibold py-2 transition-colors focus:outline-none whitespace-nowrap" aria-expanded="false" aria-haspopup="true">
+              <span>HOME</span>
+              <svg class="w-3.5 h-3.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div id="home-dropdown-menu" class="hidden absolute top-full left-0 rtl:left-auto rtl:right-0 mt-2 w-52 py-2 bg-white dark:bg-[#221B2B] border border-[#9B91CA]/20 dark:border-[#C3A9D0]/20 shadow-2xl rounded-sm z-50 transition-all">
+              <a href="index.html" class="block px-4 py-2.5 text-xs uppercase tracking-wider font-semibold transition-colors">
+                <div class="dropdown-title font-bold text-[#18131F] dark:text-[#FFFFFF]">Home 1</div>
+                <div class="dropdown-desc text-[10px] text-[#7A6986] dark:text-[#C4BAFA] capitalize font-medium">Atelier &amp; Cinematic</div>
+              </a>
+              <a href="home-2.html" class="block px-4 py-2.5 text-xs uppercase tracking-wider font-semibold transition-colors">
+                <div class="dropdown-title font-bold text-[#18131F] dark:text-[#FFFFFF]">Home 2</div>
+                <div class="dropdown-desc text-[10px] text-[#7A6986] dark:text-[#C4BAFA] capitalize font-medium">Museum &amp; Sculptural</div>
+              </a>
+            </div>
+          </div>
+
+          <a href="gallery.html" class="nav-link text-[11px] xl:text-xs uppercase tracking-wider font-semibold text-[#18131F] dark:text-white hover:text-[#9B91CA] transition-colors whitespace-nowrap">GALLERY</a>
+          <a href="classes.html" class="nav-link text-[11px] xl:text-xs uppercase tracking-wider font-semibold hover:text-[#C4BAFA] transition-colors whitespace-nowrap text-[#C4BAFA]">CLASSES &amp; WORKSHOPS</a>
+          <a href="commissions.html" class="nav-link text-[11px] xl:text-xs uppercase tracking-wider font-semibold text-[#18131F] dark:text-white hover:text-[#9B91CA] transition-colors whitespace-nowrap">CUSTOM COMMISSIONS</a>
+          <a href="studio.html" class="nav-link text-[11px] xl:text-xs uppercase tracking-wider font-semibold text-[#18131F] dark:text-white hover:text-[#9B91CA] transition-colors whitespace-nowrap">STUDIO</a>
+          <a href="contact.html" class="nav-link text-[11px] xl:text-xs uppercase tracking-wider font-semibold text-[#18131F] dark:text-white hover:text-[#9B91CA] transition-colors whitespace-nowrap">CONTACT</a>
+        </nav>
+
+        <!-- Right Controls: RTL & Dark Mode -->
+        <div class="hidden lg:flex items-center space-x-2.5 xl:space-x-3.5 rtl:space-x-reverse shrink-0 whitespace-nowrap">
+          <!-- RTL Toggle -->
+          <button type="button" class="dir-toggle-btn px-2.5 py-1 text-[10px] xl:text-[11px] font-bold tracking-wider rounded border border-[#9B91CA]/25 dark:border-[#C3A9D0]/20 hover:border-[#9B91CA] transition-colors" title="Toggle RTL/LTR text direction">
+            <span class="dir-label">LTR</span>
+          </button>
+
+          <!-- Theme Toggle -->
+          <button type="button" class="theme-toggle-btn p-2 rounded-full border border-[#9B91CA]/25 dark:border-[#C3A9D0]/20 hover:border-[#9B91CA] transition-colors shrink-0" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
+            <svg class="theme-icon-sun hidden w-4 h-4 text-[#FFD4EC]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 9H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+            </svg>
+            <svg class="theme-icon-moon w-4 h-4 text-[#221B2B] dark:text-[#FFFFFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Header Controls (Hamburger) -->
+        <div class="flex items-center space-x-2 rtl:space-x-reverse lg:hidden">
+          <button type="button" class="dir-toggle-btn px-2 py-1 text-[10px] font-bold rounded border border-[#9B91CA]/25 dark:border-[#C3A9D0]/20">
+            <span class="dir-label">LTR</span>
+          </button>
+          <button type="button" class="theme-toggle-btn p-1.5 rounded-full border border-[#9B91CA]/25 dark:border-[#C3A9D0]/20" aria-label="Toggle Theme">
+            <svg class="theme-icon-sun hidden w-4 h-4 text-[#FFD4EC]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 9H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+            </svg>
+            <svg class="theme-icon-moon w-4 h-4 text-[#221B2B] dark:text-[#FFFFFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+            </svg>
+          </button>
+          <button id="mobile-menu-btn" type="button" class="p-2 text-[#18131F] dark:text-[#FFFFFF] focus:outline-none" aria-label="Open Navigation Menu" aria-expanded="false">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer Backdrop & Panel -->
+  <div id="mobile-drawer-backdrop" class="lg:hidden fixed inset-0 bg-[#18131F]/80 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <div id="mobile-drawer" class="lg:hidden bg-[#F7F3F7] dark:bg-[#18131F] border-l rtl:border-l-0 rtl:border-r border-[#9B91CA]/20 dark:border-[#C3A9D0]/15 flex flex-col justify-between p-6">
+    <div class="space-y-6">
+      <div class="flex items-center justify-between pb-3 border-b border-[#9B91CA]/15 dark:border-[#C3A9D0]/15">
+        <span class="text-[11px] font-mono uppercase tracking-widest text-[#221B2B] dark:text-[#FFFFFF] font-semibold">MENU</span>
+        <button id="mobile-menu-close-btn" class="p-2 -mr-2 text-[#18131F] dark:text-[#FFFFFF] hover:text-[#C4BAFA] transition-colors" aria-label="Close Navigation Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Items -->
+      <nav class="flex flex-col space-y-3 font-sans">
+        <!-- Home Submenu Accordion -->
+        <div>
+          <button id="mobile-home-accordion-btn" class="w-full flex items-center justify-between text-left py-2 font-bold text-sm uppercase tracking-wider text-[#18131F] dark:text-[#FFFFFF]">
+            <span>HOME</span>
+            <svg id="mobile-home-chevron" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div id="mobile-home-accordion-menu" class="hidden pl-4 rtl:pl-0 rtl:pr-4 space-y-2 py-2 border-l-2 rtl:border-l-0 rtl:border-r-2 border-[#9B91CA]">
+            <a href="index.html" class="block text-xs uppercase font-medium text-[#221B2B] dark:text-[#FFFFFF] hover:text-[#C4BAFA]">Home 1 (Atelier &amp; Cinematic)</a>
+            <a href="home-2.html" class="block text-xs uppercase font-medium text-[#221B2B] dark:text-[#FFFFFF] hover:text-[#C4BAFA]">Home 2 (Museum &amp; Sculptural)</a>
+          </div>
+        </div>
+
+        <a href="gallery.html" class="py-2 text-sm font-bold uppercase tracking-wider text-[#18131F] dark:text-[#FFFFFF] hover:text-[#C4BAFA]">GALLERY</a>
+        <a href="classes.html" class="py-2 text-sm font-bold uppercase tracking-wider text-[#C4BAFA]">CLASSES &amp; WORKSHOPS</a>
+        <a href="commissions.html" class="py-2 text-sm font-bold uppercase tracking-wider text-[#18131F] dark:text-[#FFFFFF] hover:text-[#C4BAFA]">CUSTOM COMMISSIONS</a>
+        <a href="studio.html" class="py-2 text-sm font-bold uppercase tracking-wider text-[#18131F] dark:text-[#FFFFFF] hover:text-[#C4BAFA]">STUDIO</a>
+        <a href="contact.html" class="py-2 text-sm font-bold uppercase tracking-wider text-[#18131F] dark:text-[#FFFFFF] hover:text-[#C4BAFA]">CONTACT</a>
+      </nav>
+    </div>
+
+    <!-- Mobile Drawer Footer CTA -->
+    <div class="pt-6 border-t border-[#9B91CA]/15 dark:border-[#C3A9D0]/15 space-y-3">
+      <a href="classes.html" class="btn-primary w-full text-xs">BOOK A WORKSHOP</a>
+      <p class="text-[11px] text-center text-[#FFD4EC] font-semibold font-serif">1,150°C Kiln Active Daily</p>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MAIN CONTENT CONTAINER (EXACTLY 8 SECTIONS)
+       ======================================================================== -->
+  <main class="pt-16">
+
+   <!-- ==================================================================== 
+     SECTION 01: WORKSHOP HERO (ART OF THE GATHER) 
+     ==================================================================== --> 
+<section class="hero-dark relative min-h-[85vh] flex items-center justify-center py-20 bg-[#18131F] text-white overflow-hidden"> 
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full"> 
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center"> 
+       
+      <!-- Image Left -->
+      <div class="lg:col-span-6 lg:order-1" data-anim="reveal-3d"> 
+        <div class="aspect-[5/5] rounded-2xl overflow-hidden border border-[#9B91CA]/30 shadow-2xl relative"> 
+          <img src="assets/images/p31.jpg"  
+               alt="Gaffer guiding novice student on the blowpipe at glory hole"  
+               class="w-full h-full object-cover"> 
+          <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-[#18131F]/85 backdrop-blur-md border border-[#9B91CA]/30 text-xs font-mono space-y-1"> 
+            <span class="text-[#C4BAFA] uppercase font-bold">1-on-1 Mentorship</span> 
+            <p class="text-[#FFFFFF] font-sans text-[11px]">Every novice is paired with a dedicated resident gaffer throughout their hot shop session.</p> 
+          </div> 
+        </div> 
+      </div> 
+
+      <!-- Content Right -->
+      <div class="lg:col-span-6 lg:order-2 space-y-6 text-left rtl:text-right" data-anim="fade-up"> 
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#9B91CA]/20 border border-[#9B91CA]/40 text-[#FFD4EC] text-xs font-mono font-bold"> 
+          <span>WEEKEND BENCHES OPEN • MAX 4 PARTICIPANTS PER CLASS</span> 
+        </div> 
+
+        <h1 class="hero-heading font-serif-title text-4xl sm:text-6xl font-bold tracking-tight text-white leading-tight"> 
+          HOLD THE BLOWPIPE. GATHER THE FLAME. 
+        </h1> 
+
+        <p class="font-editorial-text text-xl sm:text-2xl text-[#FFFFFF] max-w-2xl leading-relaxed"> 
+          Step onto the hot shop floor and experience the thrilling kinetic reality of shaping 1,150°C glass with your own lungs and hands. 
+        </p> 
+
+        <div class="flex flex-wrap items-center gap-4 pt-4"> 
+          <a href="#booking-engine" class="btn-primary text-xs"> 
+            <span>VIEW SESSION DATES &amp; PRICING</span> 
+          </a> 
+          <a href="#safety-protocol" class="btn-secondary text-xs text-white border-[#C3A9D0]/30 hover:border-[#9B91CA]"> 
+            <span>SAFETY &amp; ATTIRE PROTOCOL</span> 
+          </a> 
+        </div> 
+      </div> 
+
+    </div> 
+  </div> 
+</section>
+
+    <!-- ====================================================================
+         SECTION 02: WHAT YOUR HANDS WILL CREATE (4 PILLARS)
+         ==================================================================== -->
+    <section class="py-20 lg:py-28 bg-[#F7F3F7] dark:bg-[#18131F] border-b border-[#9B91CA]/15 dark:border-[#C3A9D0]/10 transition-colors">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3" data-anim="fade-up">
+          <span class="text-xs uppercase font-mono tracking-widest text-[#7A6986] dark:text-[#C4BAFA] font-bold">TACTILE ACCOMPLISHMENTS</span>
+          <h2 class="section-heading font-serif-title text-3xl sm:text-5xl font-bold text-[#18131F] dark:text-[#FFFFFF]">
+            WHAT YOU WILL FORGE IN A SINGLE DAY
+          </h2>
+          <p class="font-editorial-text text-lg text-[#18131F] dark:text-[#FFFFFF]">
+            You don't just watch—you suit up, gather the honey-thick crystal from the furnace crucible, and create real functional glassware to take home.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+          
+          <div class="p-6 sm:p-7 rounded-2xl bg-white dark:bg-[#221B2B] border border-[#9B91CA]/20 dark:border-[#C3A9D0]/15 shadow-lg text-left rtl:text-right group hover:border-[#9B91CA] hover:-translate-y-1 transition-all duration-300 h-full flex flex-col justify-between" data-anim="fade-up">
+            <div class="space-y-2 flex-1 flex flex-col">
+              <span class="text-3xl font-serif-title font-bold text-[#7A6986] dark:text-[#C4BAFA] block mb-1">01</span>
+              <h3 class="font-serif-title text-lg font-bold text-[#18131F] dark:text-[#FFFFFF] min-h-[3.25rem] flex items-center leading-snug">Solid Optic Paperweight</h3>
+              <p class="text-xs text-[#18131F] dark:text-[#FFFFFF] leading-relaxed flex-1 min-h-[4.5rem] flex items-start">
+                Master the iron marver and apply color frit granules to forge a heavy spiral glass paperweight.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-6 sm:p-7 rounded-2xl bg-white dark:bg-[#221B2B] border border-[#9B91CA]/20 dark:border-[#C3A9D0]/15 shadow-lg text-left rtl:text-right group hover:border-[#AB95CF] hover:-translate-y-1 transition-all duration-300 h-full flex flex-col justify-between" data-anim="fade-up" style="transition-delay: 100ms;">
+            <div class="space-y-2 flex-1 flex flex-col">
+              <span class="text-3xl font-serif-title font-bold text-[#7A6986] dark:text-[#D5C2FA] block mb-1">02</span>
+              <h3 class="font-serif-title text-lg font-bold text-[#18131F] dark:text-[#FFFFFF] min-h-[3.25rem] flex items-center leading-snug">Blown Drinking Tumbler</h3>
+              <p class="text-xs text-[#18131F] dark:text-[#FFFFFF] leading-relaxed flex-1 min-h-[4.5rem] flex items-start">
+                Inflate your first hollow bubble and tool the lip with cherrywood jacks into a custom drinking vessel.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-6 sm:p-7 rounded-2xl bg-white dark:bg-[#221B2B] border border-[#9B91CA]/20 dark:border-[#C3A9D0]/15 shadow-lg text-left rtl:text-right group hover:border-[#B992A5] hover:-translate-y-1 transition-all duration-300 h-full flex flex-col justify-between" data-anim="fade-up" style="transition-delay: 200ms;">
+            <div class="space-y-2 flex-1 flex flex-col">
+              <span class="text-3xl font-serif-title font-bold text-[#7A6986] dark:text-[#FFD4EC] block mb-1">03</span>
+              <h3 class="font-serif-title text-lg font-bold text-[#18131F] dark:text-[#FFFFFF] min-h-[3.25rem] flex items-center leading-snug">Flared Bud Vase</h3>
+              <p class="text-xs text-[#18131F] dark:text-[#FFFFFF] leading-relaxed flex-1 min-h-[4.5rem] flex items-start">
+                Transfer the piece to a solid pontil iron and use centrifugal bench spinning to flare an organic ruffled rim.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-6 sm:p-7 rounded-2xl bg-white dark:bg-[#221B2B] border border-[#9B91CA]/20 dark:border-[#C3A9D0]/15 shadow-lg text-left rtl:text-right group hover:border-[#E1C5D4] hover:-translate-y-1 transition-all duration-300 h-full flex flex-col justify-between" data-anim="fade-up" style="transition-delay: 300ms;">
+            <div class="space-y-2 flex-1 flex flex-col">
+              <span class="text-3xl font-serif-title font-bold text-[#7A6986] dark:text-[#FFD4EC] block mb-1">04</span>
+              <h3 class="font-serif-title text-lg font-bold text-[#18131F] dark:text-[#FFFFFF] min-h-[3.25rem] flex items-center leading-snug">Annealing &amp; Collection</h3>
+              <p class="text-xs text-[#18131F] dark:text-[#FFFFFF] leading-relaxed flex-1 min-h-[4.5rem] flex items-start">
+                After a 24-hour controlled cooling cycle in our annealing oven, your creation is ready for collection or insured shipping.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================  
+     SECTION 03: NOVICE HOT SHOP EXPERIENCE (HALF-DAY)  
+     ==================================================================== -->  
+<section class="dark-section py-20 lg:py-20 bg-[#18131F] text-white border-b border-[#9B91CA]/20">  
+   
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"> 
+ 
+    <!-- Section Intro --> 
+    <div class="max-w-4xl mx-auto text-center mb-12 lg:mb-16" data-anim="reveal-3d"> 
+       
+      <span class="text-xs font-mono uppercase tracking-widest text-[#C4BAFA] font-bold"> 
+        LEVEL 01 • NO EXPERIENCE NEEDED 
+      </span> 
+ 
+      <h2 class="font-serif-title text-3xl sm:text-5xl lg:text-6xl font-bold text-white mt-4"> 
+        THE NOVICE HALF-DAY IMMERSION 
+      </h2> 
+ 
+      <p class="font-editorial-text text-lg text-[#FFFFFF] leading-relaxed mt-6 max-w-3xl mx-auto"> 
+        Our signature introductory workshop designed for curious newcomers, couples, and creative enthusiasts. 
+      </p>
+
+      <p class="font-editorial-text text-base sm:text-lg text-[#FFFFFF] leading-relaxed mt-4 max-w-3xl mx-auto">
+        Step inside the hot shop and experience the fundamentals of traditional glassblowing in a guided,
+        hands-on session. No previous studio experience is required, and every participant receives individual
+        instruction throughout the process.
+      </p>
+
+      <p class="font-editorial-text text-base text-[#FFFFFF] leading-relaxed mt-4 max-w-3xl mx-auto">
+        From your first introduction to the furnace through shaping, coloring, and finishing,
+        this half-day experience gives you a focused introduction to the rhythm, heat, tools,
+        and creative possibilities of working with molten glass.
+      </p>
+ 
+    </div> 
+ 
+ 
+    <!-- Main Horizontal Experience Layout --> 
+    <div class="border-y border-[#9B91CA]/30"> 
+ 
+      <!-- Top Image Strip --> 
+      <div class="py-6 lg:py-8 border-b border-[#9B91CA]/30" data-anim="clip-reveal"> 
+ 
+        <div class="grid grid-cols-12 gap-4 items-center"> 
+ 
+          <div class="col-span-8 sm:col-span-9"> 
+            <div class="h-[240px] sm:h-[300px] lg:h-[360px] rounded-xl overflow-hidden"> 
+              <img  
+                src="assets/images/p32.jpg" 
+                alt="Student learning glass marvering under instructor supervision" 
+                class="w-full h-full object-cover" 
+              > 
+            </div> 
+          </div> 
+ 
+          <div class="col-span-4 sm:col-span-3 h-full flex flex-col justify-between py-2"> 
+             
+            <span class="text-[#C4BAFA] text-xs font-mono font-bold tracking-widest uppercase"> 
+              THE EXPERIENCE 
+            </span> 
+ 
+            <span class="font-serif-title text-5xl sm:text-7xl lg:text-8xl font-bold text-[#9B91CA]/30 leading-none"> 
+              01 
+            </span> 
+ 
+          </div> 
+ 
+        </div> 
+ 
+      </div> 
+ 
+ 
+     
+ 
+ 
+      <!-- Workshop Timeline --> 
+      <div class="grid grid-cols-1 md:grid-cols-3"> 
+ 
+        <!-- Step 01 --> 
+        <div class="p-6 lg:p-8 border-b md:border-b-0 md:border-r border-[#9B91CA]/30" data-anim="tilt-in"> 
+ 
+          <span class="block text-[#C4BAFA] text-xs font-mono font-bold mb-5"> 
+            01 / TIME 
+          </span> 
+ 
+          <p class="text-xs font-mono text-[#FFFFFF] leading-relaxed"> 
+            Duration: 3.5 Hours 
+          </p> 
+ 
+          <p class="text-xs font-mono text-[#FFFFFF] leading-relaxed mt-2"> 
+            Morning or Afternoon Slots 
+          </p>
+
+          <p class="text-xs font-mono text-[#FFFFFF] leading-relaxed mt-4">
+            Allow additional time after the session for your pieces to cool and complete the
+            studio annealing process.
+          </p>
+
+          <p class="text-xs font-mono text-[#FFFFFF] leading-relaxed mt-2">
+            Arrive a few minutes early for orientation and preparation.
+          </p>
+ 
+        </div> 
+ 
+ 
+        <!-- Step 02 --> 
+        <div class="p-6 lg:p-8 border-b md:border-b-0 md:border-r border-[#9B91CA]/30" data-anim="depth-rise"> 
+ 
+          <span class="block text-[#C4BAFA] text-xs font-mono font-bold mb-5"> 
+            02 / COACHING 
+          </span> 
+ 
+          <p class="text-xs font-mono text-[#FFFFFF] leading-relaxed"> 
+            1 Master Gaffer 
+          </p> 
+ 
+          <p class="text-xs font-mono text-[#FFFFFF] leading-relaxed mt-2"> 
+            Per 2 Students for Intimate Coaching 
+          </p>
+
+          <p class="text-xs font-mono text-[#FFFFFF] leading-relaxed mt-4">
+            Receive close guidance while learning the basic movements used to gather,
+            shape, cool, and finish hot glass.
+          </p>
+
+          <p class="text-xs font-mono text-[#FFFFFF] leading-relaxed mt-2">
+            Demonstrations are followed by guided practice so you can immediately apply
+            what you have learned.
+          </p>
+ 
+        </div> 
+ 
+ 
+        <!-- Step 03 --> 
+        <div class="p-6 lg:p-8" data-anim="rotate-reveal"> 
+ 
+          <span class="block text-[#C4BAFA] text-xs font-mono font-bold mb-5"> 
+            03 / INCLUDED 
+          </span> 
+ 
+          <p class="text-xs font-mono text-[#FFFFFF] leading-relaxed"> 
+            Raw optical silica, color pigments, safety gear &amp; annealing. 
+          </p>
+
+          <p class="text-xs font-mono text-[#FFFFFF] leading-relaxed mt-4">
+            Studio tools and essential hot-shop materials are prepared for your session,
+            so you can focus entirely on learning and creating.
+          </p>
+
+          <p class="text-xs font-mono text-[#FFFFFF] leading-relaxed mt-2">
+            Your completed pieces are carefully annealed after the workshop to reduce
+            internal stress and prepare them for collection.
+          </p>
+ 
+        </div> 
+ 
+      </div> 
+
+
+      <!-- Additional Experience Content -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 py-8 lg:py-10 border-t border-[#9B91CA]/30">
+
+        <div class="lg:col-span-4 space-y-3 text-left rtl:text-right" data-anim="fade-right">
+
+          <span class="text-[#C4BAFA] text-xs font-mono uppercase tracking-widest font-bold block">
+            YOUR FIRST SESSION
+          </span>
+
+          <h3 class="font-serif-title text-xl sm:text-2xl font-bold text-white leading-tight">
+            CORE HOT SHOP CURRICULUM
+          </h3>
+
+          <p class="text-xs font-mono text-[#FFFFFF] leading-relaxed">
+            A focused introduction to the hot shop environment, designed to make your first
+            encounter with molten glass exciting, approachable, and memorable.
+          </p>
+
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#221B2B] border border-[#9B91CA]/25 text-xs font-mono text-[#FFD4EC]">
+            <span>🔥 1,150°C Furnace Practice</span>
+          </div>
+
+        </div>
+
+        <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6" data-anim="depth-rise">
+
+          <div class="p-5 rounded-xl bg-[#221B2B]/60 border border-[#9B91CA]/20">
+            <span class="text-[#C4BAFA] text-xs font-mono uppercase tracking-widest font-bold block">
+              FURNACE &amp; HEAT
+            </span>
+
+            <p class="text-xs sm:text-sm font-mono text-[#FFFFFF] leading-relaxed mt-2.5">
+              Understand the working temperature of molten glass, studio heat zones,
+              and the importance of controlled movement around the furnace.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-xl bg-[#221B2B]/60 border border-[#9B91CA]/20">
+            <span class="text-[#D5C2FA] text-xs font-mono uppercase tracking-widest font-bold block">
+              TOOLS &amp; TECHNIQUE
+            </span>
+
+            <p class="text-xs sm:text-sm font-mono text-[#FFFFFF] leading-relaxed mt-2.5">
+              Learn the purpose of essential glassblowing tools and how each tool helps
+              transform a hot gather into a controlled form.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-xl bg-[#221B2B]/60 border border-[#9B91CA]/20">
+            <span class="text-[#FFD4EC] text-xs font-mono uppercase tracking-widest font-bold block">
+              COLOR &amp; FORM
+            </span>
+
+            <p class="text-xs sm:text-sm font-mono text-[#FFFFFF] leading-relaxed mt-2.5">
+              Explore selected color pigments and discover how simple changes in shape,
+              thickness, and movement can create different visual results.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-xl bg-[#221B2B]/60 border border-[#9B91CA]/20">
+            <span class="text-[#C4BAFA] text-xs font-mono uppercase tracking-widest font-bold block">
+              FINISHING
+            </span>
+
+            <p class="text-xs sm:text-sm font-mono text-[#FFFFFF] leading-relaxed mt-2.5">
+              Complete the final stages of your pieces with instructor guidance before
+              they move into the annealing process.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- What To Expect -->
+      <div class="py-8 lg:py-10 border-t border-[#9B91CA]/30" data-anim="slide-depth">
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+          <div class="lg:col-span-5 space-y-4 text-left rtl:text-right">
+
+            <span class="text-[#C4BAFA] text-xs font-mono uppercase tracking-widest font-bold block">
+              WHAT TO EXPECT
+            </span>
+
+            <h3 class="font-serif-title text-2xl sm:text-3xl font-bold text-white leading-tight">
+              ACTIVE ATELIER MENTORSHIP
+            </h3>
+
+            <p class="text-xs font-mono text-[#D5C2FA] leading-relaxed">
+              Step up to the crucible and learn through real tactile practice with continuous instructor oversight.
+            </p>
+
+            <div class="space-y-2.5 pt-2 text-xs font-mono text-white">
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#221B2B] border border-[#9B91CA]/20">
+                <span class="w-5 h-5 rounded-full bg-[#9B91CA]/20 text-[#C4BAFA] flex items-center justify-center font-bold text-xs shrink-0">✓</span>
+                <span>Intimate 1:2 Master-to-Student coaching ratio</span>
+              </div>
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#221B2B] border border-[#9B91CA]/20">
+                <span class="w-5 h-5 rounded-full bg-[#9B91CA]/20 text-[#FFD4EC] flex items-center justify-center font-bold text-xs shrink-0">✓</span>
+                <span>Full protective Kevlar &amp; safety eyewear provided</span>
+              </div>
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#221B2B] border border-[#9B91CA]/20">
+                <span class="w-5 h-5 rounded-full bg-[#9B91CA]/20 text-[#D5C2FA] flex items-center justify-center font-bold text-xs shrink-0">✓</span>
+                <span>Forge 2 finished handmade art pieces to keep</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="lg:col-span-7 space-y-4 text-left rtl:text-right">
+
+            <p class="font-editorial-text text-lg sm:text-xl text-[#FFFFFF] leading-relaxed">
+              Expect an active, collaborative studio experience rather than a traditional
+              classroom. You will stand at the bench, work alongside your instructor,
+              observe demonstrations up close, and participate in each stage of creating
+              your pieces.
+            </p>
+
+            <p class="font-editorial-text text-base sm:text-lg text-[#FFFFFF] leading-relaxed">
+              The atmosphere is energetic and warm, with the glow of the furnace,
+              movement of tools, and transformation of glass creating an experience that
+              is as visual as it is hands-on.
+            </p>
+
+            <p class="font-editorial-text text-base sm:text-lg text-[#FFFFFF] leading-relaxed">
+              Beginners are encouraged to experiment while respecting the material and
+              the studio process. Your instructor will adjust the level of guidance to
+              help you understand the technique without taking away the feeling of making
+              something yourself.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Bottom Booking Bar --> 
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 py-7 lg:py-8" data-anim="slide-depth"> 
+ 
+        <div> 
+          <span class="text-[#C4BAFA] text-xs font-mono uppercase tracking-widest font-bold"> 
+            NOVICE BENCH ACCESS 
+          </span> 
+ 
+          <div class="mt-2 text-2xl font-bold text-white font-mono"> 
+            $195  
+            <span class="text-xs font-normal text-[#FFFFFF]"> 
+              / Person 
+            </span> 
+          </div>
+
+          <p class="text-xs font-mono text-[#FFFFFF] leading-relaxed mt-3">
+            Includes instruction, studio materials, safety equipment, pigments,
+            and annealing for your completed pieces.
+          </p>
+        </div> 
+ 
+        <a href="#booking-engine" class="btn-primary text-xs"> 
+          RESERVE NOVICE BENCH 
+        </a> 
+ 
+      </div> 
+ 
+    </div> 
+ 
+  </div> 
+ 
+</section>
+
+   <!-- ==================================================================== 
+     SECTION 04: INTERMEDIATE & ADVANCED MASTERCLASSES 
+     ==================================================================== --> 
+<section class="py-20 lg:py-20 bg-[#F7F3F7] dark:bg-[#18131F] border-b border-[#9B91CA]/15 dark:border-[#C3A9D0]/10 transition-colors"> 
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"> 
+
+    <!-- items-center → items-stretch -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch"> 
+       
+      <!-- IMAGE -->
+      <div class="lg:col-span-6 order-2 lg:order-1" data-anim="fade-right"> 
+        <div class="h-full min-h-[300px] lg:min-h-full rounded-xl overflow-hidden border border-[#9B91CA]/20 dark:border-[#C3A9D0]/15 shadow-2xl"> 
+          <img src="assets/images/p14.jpg"  
+               alt="Masterclass student pulling cane work sticks"  
+               class="w-full h-full object-cover"> 
+        </div> 
+      </div> 
+ 
+      <!-- CONTENT -->
+      <div class="lg:col-span-6 order-1 lg:order-2 space-y-6 text-left rtl:text-right" data-anim="fade-left"> 
+
+        <span class="text-xs font-mono uppercase tracking-widest text-[#7A6986] dark:text-[#D5C2FA] font-bold">
+          LEVEL 02 • MULTI-DAY ADVANCED
+        </span> 
+
+        <h2 class="section-heading font-serif-title text-3xl sm:text-5xl font-bold text-[#18131F] dark:text-[#FFFFFF]"> 
+          CANE WORK, INCALMO &amp; COMPLEX FORMS 
+        </h2> 
+
+        <p class="font-editorial-text text-lg text-[#18131F] dark:text-[#FFFFFF] leading-relaxed"> 
+          For practitioners with hot shop foundation looking to master classic Venetian techniques: pulling colored cane (*filigrana* &amp; *zanfirico*), hot lip-joining (*incalmo*), and optic mold twisting. 
+        </p> 
+ 
+        <ul class="space-y-3 text-xs font-mono text-[#18131F] dark:text-[#FFFFFF]"> 
+          <li class="flex items-center gap-3"> 
+            <span class="text-[#7A6986] dark:text-[#D5C2FA] font-bold">✓</span> 
+            <span>Duration: Full Weekend (2 Days • 14 Total Hot Shop Hours)</span> 
+          </li> 
+
+          <li class="flex items-center gap-3"> 
+            <span class="text-[#7A6986] dark:text-[#D5C2FA] font-bold">✓</span> 
+            <span>Topics: Reticello bubble entrapment, Swedish overlays, stemware foot attachments</span> 
+          </li> 
+
+          <li class="flex items-center gap-3"> 
+            <span class="text-[#7A6986] dark:text-[#D5C2FA] font-bold">✓</span> 
+            <span>Prerequisite: Novice Immersion or 10+ hours verifiable gaffer bench time</span> 
+          </li> 
+        </ul> 
+
+        <div class="pt-4 flex items-center gap-6"> 
+          <span class="text-2xl font-bold text-[#18131F] dark:text-[#FFFFFF] font-mono">
+            $420 
+            <span class="text-xs font-normal text-[#7A6986] dark:text-[#FFD4EC] font-semibold">
+              / Person
+            </span>
+          </span> 
+
+          <a href="#booking-engine" class="btn-primary text-xs">
+            ENROLL IN MASTERCLASS
+          </a> 
+        </div> 
+
+      </div> 
+ 
+    </div> 
+  </div> 
+</section>
+
+    <!-- ====================================================================
+         SECTION 05: PRIVATE ATELIER & MASTER APPRENTICESHIPS
+         ==================================================================== -->
+    <section class="dark-section py-20 lg:py-20 bg-[#18131F] text-white border-b border-[#9B91CA]/20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="p-8 lg:p-12 rounded-2xl bg-[#221B2B] border border-[#9B91CA]/30 shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-12 items-center" data-anim="scale-up">
+          <div class="lg:col-span-7 space-y-6 text-left rtl:text-right">
+            <span class="text-xs font-mono uppercase tracking-widest text-[#FFD4EC] font-bold">VIP 1-ON-1 ATELIER</span>
+            <h3 class="font-serif-title text-3xl sm:text-4xl font-bold text-white">
+              SOLO GAFFER INTENSIVE WITH ELENA VANCE
+            </h3>
+            <p class="font-editorial-text text-lg text-[#FFFFFF] leading-relaxed">
+              Book the entire hot shop exclusively for yourself or a private duo. Master Gaffer Elena Vance personally builds a custom curriculum tailored to your specific creative ambitions—from monumental sculptures to specialized glass casting.
+            </p>
+            <div class="flex items-center gap-6 text-xs font-mono pt-2 border-t border-[#9B91CA]/20">
+              <span>Full Day (6 Hours)</span>
+              <span>Exclusive 2-Kiln Access</span>
+              <span class="text-[#C4BAFA] font-bold">$850 All-Inclusive</span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 flex justify-center lg:justify-end">
+            <a href="contact.html" class="btn-primary text-xs px-8 py-4">
+              <span>REQUEST PRIVATE INTENSIVE</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 06: WORKSHOP JOURNEY (HOURLY TIMELINE)
+         ==================================================================== -->
+    <section class="py-20 lg:py-28 bg-[#F7F3F7] dark:bg-[#18131F] border-b border-[#9B91CA]/15 dark:border-[#C3A9D0]/10 transition-colors">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3" data-anim="fade-up">
+          <span class="text-xs font-mono uppercase tracking-widest text-[#7A6986] dark:text-[#C4BAFA] font-bold">DAY IN THE HOT SHOP</span>
+          <h2 class="section-heading font-serif-title text-3xl sm:text-5xl font-bold text-[#18131F] dark:text-[#FFFFFF]">
+            CHRONOLOGY OF A WORKSHOP DAY
+          </h2>
+        </div>
+
+        <div class="space-y-4 max-w-4xl mx-auto">
+          
+          <div class="p-6 rounded-xl bg-white dark:bg-[#221B2B] border border-[#9B91CA]/20 dark:border-[#C3A9D0]/15 shadow-sm flex items-start gap-6 text-left rtl:text-right" data-anim="fade-up">
+            <div class="font-mono text-xs font-bold text-[#7A6986] dark:text-[#C4BAFA] pt-1 whitespace-nowrap">09:00 AM</div>
+            <div class="space-y-1">
+              <strong class="font-serif text-base text-[#18131F] dark:text-[#FFFFFF] block">Thermal Physics &amp; Hot Shop Safety Briefing</strong>
+              <p class="text-xs text-[#18131F] dark:text-[#FFFFFF]">Understanding radiant heat zones, emergency shutoffs, Kevlar sleeve usage, and blowpipe hygiene.</p>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-xl bg-white dark:bg-[#221B2B] border border-[#9B91CA]/20 dark:border-[#C3A9D0]/15 shadow-sm flex items-start gap-6 text-left rtl:text-right" data-anim="fade-up" style="transition-delay: 100ms;">
+            <div class="font-mono text-xs font-bold text-[#7A6986] dark:text-[#C4BAFA] pt-1 whitespace-nowrap">10:15 AM</div>
+            <div class="space-y-1">
+              <strong class="font-serif text-base text-[#18131F] dark:text-[#FFFFFF] block">The First Gather &amp; Marver Practice</strong>
+              <p class="text-xs text-[#18131F] dark:text-[#FFFFFF]">Taking the pipe into the 1,150°C pot to gather an optic punty and shaping on the cast iron slab.</p>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-xl bg-white dark:bg-[#221B2B] border border-[#9B91CA]/20 dark:border-[#C3A9D0]/15 shadow-sm flex items-start gap-6 text-left rtl:text-right" data-anim="fade-up" style="transition-delay: 200ms;">
+            <div class="font-mono text-xs font-bold text-[#7A6986] dark:text-[#C4BAFA] pt-1 whitespace-nowrap">11:45 AM</div>
+            <div class="space-y-1">
+              <strong class="font-serif text-base text-[#18131F] dark:text-[#FFFFFF] block">Inflating the Hollow Bubble &amp; Color Pick-up</strong>
+              <p class="text-xs text-[#18131F] dark:text-[#FFFFFF]">Rolling hot glass over crushed mineral frit, reheating in the glory hole, and blowing the initial cylinder.</p>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-xl bg-white dark:bg-[#221B2B] border border-[#9B91CA]/20 dark:border-[#C3A9D0]/15 shadow-sm flex items-start gap-6 text-left rtl:text-right" data-anim="fade-up" style="transition-delay: 300ms;">
+            <div class="font-mono text-xs font-bold text-[#7A6986] dark:text-[#C4BAFA] pt-1 whitespace-nowrap">01:00 PM</div>
+            <div class="space-y-1">
+              <strong class="font-serif text-base text-[#18131F] dark:text-[#FFFFFF] block">Gaffer Bench Tooling &amp; Lehr Annealing</strong>
+              <p class="text-xs text-[#18131F] dark:text-[#FFFFFF]">Constricting the neck with jacks, shearing the top, and placing your completed piece into the 510°C annealing oven.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================================================================== 
+     SECTION 07: STUDIO SAFETY & ATTIRE PROTOCOL 
+     ==================================================================== --> 
+<section id="safety-protocol" class="dark-section py-20 lg:py-28 bg-[#18131F] text-white border-b border-[#9B91CA]/20 bg-[url('assets/images/p44.jpg')] bg-cover bg-center bg-no-repeat"> 
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"> 
+         
+        <div class="max-w-3xl mb-16 space-y-2 text-left rtl:text-right" data-anim="fade-up"> 
+          <span class="text-xs font-mono uppercase tracking-widest text-[#FFD4EC] font-bold">ZERO-COMPROMISE SAFETY</span> 
+          <h2 class="font-serif-title text-3xl sm:text-5xl font-bold text-white">REQUIRED HOT SHOP ATTIRE &amp; PROTOCOL</h2> 
+        </div> 
+ 
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left rtl:text-right items-stretch"> 
+           
+          <div class="p-6 rounded-xl bg-[#221B2B] border border-[#9B91CA]/20 h-full flex flex-col justify-between" data-anim="fade-up"> 
+            <div> 
+              <span class="text-[#C4BAFA] font-bold font-mono text-xs block mb-2">MANDATORY ATTIRE</span> 
+              <h3 class="font-serif-title text-lg font-bold text-white min-h-[2.5rem] flex items-center">100% Natural Cotton Fibers</h3> 
+              <p class="text-xs text-[#FFFFFF] leading-relaxed"> 
+                Synthetic fabrics (polyester, nylon, fleece) melt near radiant heat. Wear 100% cotton jeans and a long-sleeve cotton shirt. 
+              </p> 
+            </div> 
+          </div> 
+ 
+          <div class="p-6 rounded-xl bg-[#221B2B] border border-[#9B91CA]/20 h-full flex flex-col justify-between" data-anim="fade-up" style="transition-delay: 150ms;"> 
+            <div> 
+              <span class="text-[#D5C2FA] font-bold font-mono text-xs block mb-2">FOOTWEAR</span> 
+              <h3 class="font-serif-title text-lg font-bold text-white min-h-[2.5rem] flex items-center">Closed-Toe Leather Boots</h3> 
+              <p class="text-xs text-[#FFFFFF] leading-relaxed"> 
+                No sandals, canvas sneakers, or mesh trainers. Heavy leather boots or sturdy work shoes protect against falling hot shears. 
+              </p> 
+            </div> 
+          </div> 
+ 
+          <div class="p-6 rounded-xl bg-[#221B2B] border border-[#9B91CA]/20 h-full flex flex-col justify-between" data-anim="fade-up" style="transition-delay: 300ms;"> 
+            <div> 
+              <span class="text-[#FFD4EC] font-bold font-mono text-xs block mb-2">STUDIO PROVIDED</span> 
+              <h3 class="font-serif-title text-lg font-bold text-white min-h-[2.5rem] flex items-center">Kevlar Sleeves &amp; Eyewear</h3> 
+              <p class="text-xs text-[#FFFFFF] leading-relaxed"> 
+                We provide ANSI-approved didymium flare safety glasses, Kevlar forearm sleeves, and heat-resistant split leather gloves. 
+              </p> 
+            </div> 
+          </div> 
+ 
+        </div> 
+ 
+      </div> 
+</section>
+    <!-- ====================================================================
+         SECTION 08: INTERACTIVE BOOKING ENGINE & DATE SELECTOR
+         ==================================================================== -->
+    <section id="booking-engine" class="py-24 lg:py-32 bg-[#F7F3F7] dark:bg-[#18131F] transition-colors">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="p-8 sm:p-12 rounded-2xl bg-white dark:bg-[#221B2B] border border-[#9B91CA]/25 dark:border-[#C3A9D0]/20 shadow-2xl space-y-8 text-left rtl:text-right" data-anim="scale-up">
+          
+          <div class="space-y-2 border-b border-[#9B91CA]/15 dark:border-[#C3A9D0]/15 pb-6">
+            <span class="inline-block px-2.5 py-1 rounded bg-[#7A6986]/10 dark:bg-[#9B91CA]/20 text-xs font-mono uppercase tracking-widest text-[#4D2E5C] dark:text-[#FFD4EC] font-bold">INTERACTIVE HOT SHOP RESERVATIONS</span>
+            <h2 class="font-serif-title text-3xl sm:text-4xl font-bold text-[#18131F] dark:text-[#FFFFFF]">
+              RESERVE YOUR BENCH &amp; BLOWPIPE
+            </h2>
+            <p class="font-editorial-text text-base text-[#221B2B] dark:text-[#FFFFFF]">
+              Select your preferred workshop tier and group size below for immediate schedule confirmation.
+            </p>
+          </div>
+
+          <form class="studio-interactive-form space-y-6">
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              
+              <!-- Tier Selector -->
+              <div class="space-y-2">
+                <label for="workshop-tier-select" class="block text-xs font-mono uppercase font-bold text-[#18131F] dark:text-[#FFFFFF]">
+                  Workshop Level
+                </label>
+                <select id="workshop-tier-select" class="w-full p-3 rounded-lg bg-[#F7F3F7] dark:bg-[#18131F] border border-[#9B91CA]/25 dark:border-[#C3A9D0]/20 text-xs text-[#18131F] dark:text-[#FFFFFF] focus:border-[#9B91CA] focus:outline-none">
+                  <option value="intro">Novice Half-Day Immersion ($195 / person)</option>
+                  <option value="intermediate">Multi-Day Masterclass Weekend ($420 / person)</option>
+                  <option value="master">Solo Atelier Intensive 1-on-1 ($850 / person)</option>
+                </select>
+              </div>
+
+              <!-- Seat Count -->
+              <div class="space-y-2">
+                <label for="workshop-seat-count" class="block text-xs font-mono uppercase font-bold text-[#18131F] dark:text-[#FFFFFF]">
+                  Number of Participants (Max 4)
+                </label>
+                <input type="number" id="workshop-seat-count" min="1" max="4" value="1" class="w-full p-3 rounded-lg bg-[#F7F3F7] dark:bg-[#18131F] border border-[#9B91CA]/25 dark:border-[#C3A9D0]/20 text-xs text-[#18131F] dark:text-[#FFFFFF] focus:border-[#9B91CA] focus:outline-none">
+              </div>
+
+              <!-- Date Picker -->
+              <div class="space-y-2">
+                <label for="workshop-date" class="block text-xs font-mono uppercase font-bold text-[#18131F] dark:text-[#FFFFFF]">
+                  Preferred Weekend Date
+                </label>
+                <input type="date" id="workshop-date" required class="w-full p-3 rounded-lg bg-[#F7F3F7] dark:bg-[#18131F] border border-[#9B91CA]/25 dark:border-[#C3A9D0]/20 text-xs text-[#18131F] dark:text-[#FFFFFF] focus:border-[#9B91CA] focus:outline-none">
+              </div>
+
+              <!-- Session Time -->
+              <div class="space-y-2">
+                <label for="workshop-session-time" class="block text-xs font-mono uppercase font-bold text-[#18131F] dark:text-[#FFFFFF]">
+                  Time Slot
+                </label>
+                <select id="workshop-session-time" class="w-full p-3 rounded-lg bg-[#F7F3F7] dark:bg-[#18131F] border border-[#9B91CA]/25 dark:border-[#C3A9D0]/20 text-xs text-[#18131F] dark:text-[#FFFFFF] focus:border-[#9B91CA] focus:outline-none">
+                  <option value="morning">Morning Session: 9:00 AM – 1:00 PM</option>
+                  <option value="afternoon">Afternoon Session: 2:00 PM – 6:00 PM</option>
+                </select>
+              </div>
+
+            </div>
+
+            <!-- Contact Inputs -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
+              <div class="space-y-2">
+                <label for="workshop-name" class="block text-xs font-mono uppercase font-bold text-[#18131F] dark:text-[#FFFFFF]">Your Full Name</label>
+                <input type="text" id="workshop-name" placeholder="Elena Vance" required class="w-full p-3 rounded-lg bg-[#F7F3F7] dark:bg-[#18131F] border border-[#9B91CA]/25 dark:border-[#C3A9D0]/20 text-xs text-[#18131F] dark:text-[#FFFFFF] focus:border-[#9B91CA] focus:outline-none">
+              </div>
+              <div class="space-y-2">
+                <label for="workshop-email" class="block text-xs font-mono uppercase font-bold text-[#18131F] dark:text-[#FFFFFF]">Email Address</label>
+                <input type="email" id="workshop-email" placeholder="elena@studio.art" required class="w-full p-3 rounded-lg bg-[#F7F3F7] dark:bg-[#18131F] border border-[#9B91CA]/25 dark:border-[#C3A9D0]/20 text-xs text-[#18131F] dark:text-[#FFFFFF] focus:border-[#9B91CA] focus:outline-none">
+              </div>
+            </div>
+
+            <!-- Dynamic Pricing Summary -->
+            <div class="p-4 rounded-xl bg-[#F7F3F7] dark:bg-[#18131F] border border-[#9B91CA]/20 dark:border-[#C3A9D0]/15 flex flex-col sm:flex-row sm:items-center justify-between gap-4 font-mono text-xs">
+              <div>
+                <span class="text-[#4D2E5C] dark:text-[#FFD4EC] font-bold block">Total Investment:</span>
+                <strong id="workshop-total-price" class="text-xl text-[#18131F] dark:text-[#FFFFFF] font-bold">$195</strong>
+              </div>
+              <div>
+                <span class="text-[#4D2E5C] dark:text-[#FFD4EC] font-bold block">Deposit to Reserve Bench (50%):</span>
+                <strong id="workshop-deposit-price" class="text-xl text-[#4D2E5C] dark:text-[#FFD4EC] font-bold">$98</strong>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-primary w-full py-4 text-xs font-bold uppercase tracking-wider">
+              <span>CONFIRM BENCH RESERVATION</span>
+              <svg class="w-4 h-4 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       FOOTER — IDENTICAL LUXURY ATELIER LAYOUT ACROSS ALL PAGES
+       ======================================================================== -->
+  <footer class="bg-[#18131F] text-[#FFFFFF] border-t border-[#9B91CA]/20 font-sans transition-colors">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10">
+        
+        <!-- Brand & Mission Column -->
+        <div class="sm:col-span-2 lg:col-span-4 space-y-4 text-left rtl:text-right">
+          <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 group focus:outline-none shrink-0 inline-flex" aria-label="Glassblowing Studio Home">
+            <div
+              class="w-8 h-8 rounded-full bg-gradient-to-tr from-[#9B91CA] to-[#AB95CF] flex items-center justify-center text-white shadow-lg group-hover:scale-105 transition-transform shrink-0">
+              <svg class="w-4 h-4 text-white animate-pulse" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+              </svg>
+            </div>
+            <div class="flex flex-col">
+              <span
+                class="brand-logo-title font-serif-title font-bold text-base sm:text-lg tracking-widest text-white uppercase leading-none">GLASSBLOWING</span>
+              <span
+                class="brand-logo-sub text-[9px] tracking-[0.25em] text-[#C4BAFA] uppercase font-semibold mt-0.5">STUDIO • ATELIER</span>
+            </div>
+          </a>
+          <p class="font-editorial-text text-base text-[#FFFFFF] italic max-w-sm">
+            "Handblown glass shaped by fire, breath, and human hands."
+          </p>
+          <p class="text-xs text-[#FFFFFF] leading-relaxed">
+            Independent contemporary glass art studio, hot shop workshop, and custom architectural glass atelier.
+          </p>
+          <div class="text-xs font-mono text-[#FFD4EC]">
+            FURNACE OPERATING DAILY: 1,150°C
+          </div>
+        </div>
+
+        <div class="space-y-3 text-left rtl:text-right lg:col-span-2">
+          <div class="font-serif-title text-sm font-bold text-white uppercase tracking-wider">EXPLORE</div>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-[#C4BAFA] transition-colors">Home (Atelier Stage)</a></li>
+            <li><a href="home-2.html" class="hover:text-[#C4BAFA] transition-colors">Home 2 (Museum Stage)</a></li>
+            <li><a href="gallery.html" class="hover:text-[#C4BAFA] transition-colors">Gallery &amp; Collections</a></li>
+            <li><a href="classes.html" class="hover:text-[#C4BAFA] transition-colors">Classes &amp; Workshops</a></li>
+            <li><a href="commissions.html" class="hover:text-[#C4BAFA] transition-colors">Custom Commissions</a></li>
+            <li><a href="studio.html" class="hover:text-[#C4BAFA] transition-colors">The Physical Studio</a></li>
+            <li><a href="contact.html" class="hover:text-[#C4BAFA] transition-colors">Contact Atelier</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-3 text-left rtl:text-right lg:col-span-3">
+          <div class="font-serif-title text-sm font-bold text-white uppercase tracking-wider">HOT SHOP HOURS</div>
+          <div class="text-xs space-y-2 text-[#FFFFFF]">
+            <div>
+              <strong class="text-white block">Active Hot Shop Pours</strong>
+              <span>Tuesday – Saturday: 8:00 AM – 6:00 PM</span>
+            </div>
+            <div>
+              <strong class="text-white block">Public Viewing Gallery</strong>
+              <span>Thursday – Sunday: 10:00 AM – 5:00 PM</span>
+            </div>
+            <div>
+              <strong class="text-white block">Weekend Masterclasses</strong>
+              <span>Saturday &amp; Sunday: 9:00 AM – 4:30 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-3 text-left rtl:text-right lg:col-span-3">
+          <div class="font-serif-title text-sm font-bold text-white uppercase tracking-wider">ATELIER LOCATION</div>
+          <div class="text-xs space-y-3 text-[#F3E9F1]">
+            <div class="flex items-start gap-2.5">
+              <svg class="w-4 h-4 text-[#C4BAFA] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              <span>742 Vulcan Foundry Way<br>Artisan Kiln District, Studio B4<br>San Francisco, CA 94107</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-[#C4BAFA] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              <a href="tel:+14158904527" class="font-mono text-[#C4BAFA] hover:text-[#FFD4EC] transition-colors whitespace-nowrap">Tel: +1 (415) 890-GLAS</a>
+            </div>
+            <div class="flex items-start gap-2.5">
+              <svg class="w-4 h-4 text-[#C4BAFA] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+              <a href="mailto:atelier@glassblowingstudio.art" class="font-mono text-[#C4BAFA] hover:text-[#FFD4EC] transition-colors break-words">Email: atelier@glassblowingstudio.art</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-[#9B91CA]/15 flex flex-col sm:flex-row items-center justify-between text-xs text-[#FFFFFF] gap-4">
+        <div>
+          © 2026 Glassblowing Studio. All rights reserved. Handcrafted with pride.
+        </div>
+        <div class="flex items-center space-x-6 rtl:space-x-reverse">
+          <a href="assets/image-sources.md" class="hover:text-[#C4BAFA] transition-colors">Image Licenses</a>
+          <a href="contact.html" class="hover:text-[#C4BAFA] transition-colors">Safety Protocols</a>
+          <a href="contact.html" class="hover:text-[#C4BAFA] transition-colors">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="scroll-to-top" type="button" aria-label="Scroll to top of page" title="Scroll to top">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+    </svg>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/interactive.js"></script>
+</body>
+</html>
+
+
+
+
+
+
