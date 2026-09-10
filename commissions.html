@@ -113,34 +113,34 @@
         </nav>
 
         <!-- Right Controls: RTL & Dark Mode -->
-        <div class="hidden lg:flex items-center space-x-2.5 xl:space-x-3.5 rtl:space-x-reverse shrink-0 whitespace-nowrap">
+        <div class="hidden lg:flex items-center gap-3 shrink-0">
           <!-- RTL Toggle -->
-          <button type="button" class="dir-toggle-btn px-2.5 py-1 text-[10px] xl:text-[11px] font-bold tracking-wider rounded border border-[#7A6986]/30 dark:border-[#9B91CA]/30 hover:border-[#9B91CA] transition-colors" title="Toggle RTL/LTR text direction">
-            <span class="dir-label">LTR</span>
+          <button type="button" class="dir-toggle-btn rounded-full shadow-sm hover:scale-105 shrink-0" title="Toggle RTL/LTR text direction" aria-label="Toggle Direction">
+            <span class="dir-label font-mono font-black text-xs">LTR</span>
           </button>
 
           <!-- Theme Toggle -->
-          <button type="button" class="theme-toggle-btn p-2 rounded-full border border-[#221B2B] dark:border-[#9B91CA] bg-white dark:bg-[#9B91CA]/20 hover:border-[#BE185D] dark:hover:border-[#FFD4EC] transition-all shrink-0 shadow-sm" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
-            <svg class="theme-icon-sun hidden w-4 h-4 text-[#FFD4EC]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 9H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+          <button type="button" class="theme-toggle-btn rounded-full shadow-sm hover:scale-105 shrink-0" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
+            <svg class="theme-icon-sun hidden w-4 h-4 text-[#FFD4EC]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 9H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
             </svg>
-            <svg class="theme-icon-moon w-4 h-4 text-[#221B2B] dark:text-[#FFFFFF]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+            <svg class="theme-icon-moon w-4 h-4 text-[#221B2B] dark:text-[#FFFFFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
             </svg>
           </button>
         </div>
 
         <!-- Mobile Header Controls (Hamburger) -->
-        <div class="flex items-center space-x-2 rtl:space-x-reverse lg:hidden">
-          <button type="button" class="dir-toggle-btn px-2 py-1 text-[10px] font-bold rounded border border-[#7A6986]/30 dark:border-[#9B91CA]/30">
-            <span class="dir-label">LTR</span>
+        <div class="flex items-center gap-2.5 sm:gap-3 lg:hidden">
+          <button type="button" class="dir-toggle-btn rounded-full shadow-sm" title="Toggle RTL/LTR text direction" aria-label="Toggle Direction">
+            <span class="dir-label font-mono font-black text-[11px]">LTR</span>
           </button>
-          <button type="button" class="theme-toggle-btn p-1.5 rounded-full border border-[#221B2B] dark:border-[#9B91CA] bg-white dark:bg-[#9B91CA]/20" aria-label="Toggle Theme">
-            <svg class="theme-icon-sun hidden w-4 h-4 text-[#FFD4EC]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 9H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+          <button type="button" class="theme-toggle-btn rounded-full shadow-sm" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
+            <svg class="theme-icon-sun hidden w-4 h-4 text-[#FFD4EC]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 9H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
             </svg>
-            <svg class="theme-icon-moon w-4 h-4 text-[#221B2B] dark:text-[#FFFFFF]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+            <svg class="theme-icon-moon w-4 h-4 text-[#221B2B] dark:text-[#FFFFFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
             </svg>
           </button>
           <button id="mobile-menu-btn" type="button" class="p-2 text-[#221B2B] dark:text-[#FFFFFF] focus:outline-none" aria-label="Open Navigation Menu" aria-expanded="false">

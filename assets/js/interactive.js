@@ -13,6 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const thermalHandle = document.getElementById('thermal-slider-handle');
   const thermalAfter = document.getElementById('thermal-after-layer');
   const thermalTempBadge = document.getElementById('thermal-temp-display');
+  const dynamicEyebrow = document.getElementById('thermal-badge-eyebrow');
+  const dynamicTitle = document.getElementById('thermal-badge-title');
+  const dynamicDot = document.getElementById('thermal-badge-dot');
 
   if (thermalContainer && thermalHandle && thermalAfter) {
     let isDragging = false;
@@ -27,9 +30,43 @@ document.addEventListener('DOMContentLoaded', () => {
       thermalHandle.style.left = `${percentage}%`;
       thermalAfter.style.clipPath = `polygon(${percentage}% 0, 100% 0, 100% 100%, ${percentage}% 100%)`;
 
-      if (thermalTempBadge) {
-        const temp = Math.round(20 + (percentage / 100) * 1130);
-        thermalTempBadge.textContent = `${temp.toLocaleString()}°C / ${(Math.round(temp * 1.8 + 32)).toLocaleString()}°F`;
+      // Calculate dynamic temperature from 20°C up to 1,150°C
+      // When percentage is 100% (all raw silica visible), moltenRatio is 0, temp is 20°C
+      // When percentage is 0% (all molten glass visible), moltenRatio is 1, temp is 1,150°C
+      const moltenRatio = (100 - percentage) / 100;
+      const temp = Math.round(20 + moltenRatio * 1130);
+      const tempF = Math.round(temp * 1.8 + 32);
+
+      if (percentage <= 50) {
+        // When slider moves to the left (< 50%), molten glass gather fills the screen
+        if (dynamicEyebrow) {
+          dynamicEyebrow.textContent = 'State 02: Fluid Viscosity';
+          dynamicEyebrow.style.color = '#FFD4EC';
+        }
+        if (dynamicTitle) {
+          dynamicTitle.textContent = 'Radiant Molten Gather';
+        }
+        if (thermalTempBadge) {
+          thermalTempBadge.textContent = `Glory Hole: ${temp.toLocaleString()}°C / ${tempF.toLocaleString()}°F`;
+        }
+        if (dynamicDot) {
+          dynamicDot.style.backgroundColor = '#FFD4EC';
+        }
+      } else {
+        // When slider moves to the right (> 50%), raw silica sand is dominant
+        if (dynamicEyebrow) {
+          dynamicEyebrow.textContent = 'State 01: Inert';
+          dynamicEyebrow.style.color = '#C4BAFA';
+        }
+        if (dynamicTitle) {
+          dynamicTitle.textContent = 'Raw Silica & Soda Ash';
+        }
+        if (thermalTempBadge) {
+          thermalTempBadge.textContent = `Ambient: ${temp.toLocaleString()}°C / ${tempF.toLocaleString()}°F`;
+        }
+        if (dynamicDot) {
+          dynamicDot.style.backgroundColor = '#C4BAFA';
+        }
       }
     }
 
