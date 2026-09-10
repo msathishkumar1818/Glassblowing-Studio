@@ -611,6 +611,18 @@ html:not(.dark) .nav-link[aria-current="page"] {
   box-shadow: 0 0 8px rgba(155, 145, 202, 0.6);
 }
 
+/* Seamless hover bridge for Desktop Home Dropdown */
+#home-dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 14px;
+  background: transparent;
+  pointer-events: auto;
+}
+
 /* Dropdown Menu in Light Mode */
 html:not(.dark) #home-dropdown-menu {
   background-color: #FFFFFF !important;
