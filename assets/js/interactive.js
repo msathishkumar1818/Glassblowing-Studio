@@ -824,14 +824,10 @@ document.addEventListener('DOMContentLoaded', () => {
     editionFilterTabs.forEach(tab => {
       tab.addEventListener('click', () => {
         // Reset tab styles
-        editionFilterTabs.forEach(t => {
-          t.classList.remove('active', 'bg-[#7C3AED]', 'text-white', 'border-[#7C3AED]', 'shadow-lg');
-          t.classList.add('bg-white', 'dark:bg-[#221B2B]', 'text-[#18131F]', 'dark:text-[#FFFFFF]', 'border-[#9B91CA]/50', 'dark:border-white/30');
-        });
+        editionFilterTabs.forEach(t => t.classList.remove('active'));
 
         // Activate clicked tab
-        tab.classList.add('active', 'bg-[#7C3AED]', 'text-white', 'border-[#7C3AED]', 'shadow-lg');
-        tab.classList.remove('bg-white', 'dark:bg-[#221B2B]', 'text-[#18131F]', 'dark:text-[#FFFFFF]', 'border-[#9B91CA]/50', 'dark:border-white/30');
+        tab.classList.add('active');
 
         const filter = tab.getAttribute('data-edition-filter');
 

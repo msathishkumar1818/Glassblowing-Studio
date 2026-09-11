@@ -2018,3 +2018,78 @@ a[class*="mt-auto"] {
 
   }
 
+/* ==========================================================================
+   INTERACTIVE FILTER TABS & PILLS (PREVENT HOVER / ACTIVE COLOR INVISIBILITY)
+   ========================================================================== */
+
+/* Home 2: Archive of Numbered Editions (Section 05) Filter Tabs */
+.edition-filter-tab {
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #FFFFFF !important;
+  color: #18131F !important;
+  border-color: rgba(155, 145, 202, 0.45) !important;
+  box-shadow: 0 2px 6px rgba(24, 19, 31, 0.04);
+}
+
+html.dark .edition-filter-tab {
+  background-color: #221B2B !important;
+  color: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+/* Inactive Hover State */
+.edition-filter-tab:not(.active):hover {
+  border-color: #7C3AED !important;
+  color: #7C3AED !important;
+  background-color: rgba(124, 58, 237, 0.06) !important;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.15) !important;
+  transform: translateY(-1px);
+}
+
+html.dark .edition-filter-tab:not(.active):hover {
+  border-color: #FFD4EC !important;
+  color: #FFD4EC !important;
+  background-color: rgba(255, 212, 236, 0.08) !important;
+  box-shadow: 0 4px 14px rgba(255, 212, 236, 0.15) !important;
+  transform: translateY(-1px);
+}
+
+/* Active State & Active Hover State — Text ALWAYS White & Fully Legible */
+.edition-filter-tab.active,
+.edition-filter-tab.active:hover,
+.edition-filter-tab.active:focus {
+  background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%) !important;
+  color: #FFFFFF !important;
+  border-color: #7C3AED !important;
+  box-shadow: 0 6px 18px rgba(124, 58, 237, 0.45) !important;
+  transform: translateY(0);
+}
+
+html.dark .edition-filter-tab.active,
+html.dark .edition-filter-tab.active:hover,
+html.dark .edition-filter-tab.active:focus {
+  background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%) !important;
+  color: #FFFFFF !important;
+  border-color: #FFD4EC !important;
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.55) !important;
+  transform: translateY(0);
+}
+
+/* Gallery Filter Pills Active & Hover Fix */
+.gallery-filter-pill.active,
+.gallery-filter-pill.active:hover,
+.gallery-filter-pill.active:focus {
+  background-color: #9B91CA !important;
+  color: #FFFFFF !important;
+  border-color: #9B91CA !important;
+}
+
+/* Studio Chamber Tab Active & Hover Fix */
+.studio-chamber-tab-btn.active,
+.studio-chamber-tab-btn.active:hover,
+.studio-chamber-tab-btn.active:focus {
+  background-color: #9B91CA !important;
+  color: #18131F !important;
+  border-color: #FFD4EC !important;
+}
