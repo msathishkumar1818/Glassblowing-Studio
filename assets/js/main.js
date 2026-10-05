@@ -193,8 +193,42 @@
     const accordionMenu = document.getElementById('mobile-home-accordion-menu');
     const accordionChevron = document.getElementById('mobile-home-chevron');
 
+    function closeAccordion() {
+      if (accordionMenu) {
+        accordionMenu.classList.add('hidden');
+      }
+      if (accordionChevron) {
+        accordionChevron.classList.remove('rotate-180');
+      }
+      if (accordionBtn) {
+        accordionBtn.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    function toggleAccordion(e) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      if (!accordionMenu) return;
+      const isCurrentlyOpen = !accordionMenu.classList.contains('hidden');
+      if (isCurrentlyOpen) {
+        closeAccordion();
+      } else {
+        accordionMenu.classList.remove('hidden');
+        if (accordionChevron) {
+          accordionChevron.classList.add('rotate-180');
+        }
+        if (accordionBtn) {
+          accordionBtn.setAttribute('aria-expanded', 'true');
+        }
+      }
+    }
+
     function openDrawer() {
       if (!mobileDrawer) return;
+      // Ensure accordion is strictly closed by default on drawer open
+      closeAccordion();
       mobileDrawer.classList.add('is-open');
       if (mobileBackdrop) {
         mobileBackdrop.classList.add('is-open');
@@ -207,6 +241,8 @@
 
     function closeDrawer() {
       if (!mobileDrawer) return;
+      // Always reset accordion to closed state when drawer closes
+      closeAccordion();
       mobileDrawer.classList.remove('is-open');
       if (mobileBackdrop) {
         mobileBackdrop.classList.remove('is-open');
@@ -228,18 +264,24 @@
     if (mobileCloseBtn) mobileCloseBtn.addEventListener('click', closeDrawer);
     if (mobileBackdrop) mobileBackdrop.addEventListener('click', closeDrawer);
 
-    // Mobile Home Submenu Accordion
+    // Ensure accordion is initially closed on page load
+    closeAccordion();
+
+    // Mobile Home Submenu Accordion: ONLY open when HOME button is clicked
     if (accordionBtn && accordionMenu) {
-      accordionBtn.addEventListener('click', () => {
-        accordionMenu.classList.toggle('hidden');
-        if (accordionChevron) {
-          accordionChevron.classList.toggle('rotate-180');
-        }
-      });
+      accordionBtn.setAttribute('type', 'button');
+      accordionBtn.addEventListener('click', toggleAccordion);
     }
 
-    // Close mobile drawer when clicking any link inside
+    // Auto-close accordion if clicking anywhere else in the mobile drawer
     if (mobileDrawer) {
+      mobileDrawer.addEventListener('click', (e) => {
+        if (!e.target.closest('#mobile-home-accordion-btn') && !e.target.closest('#mobile-home-accordion-menu')) {
+          closeAccordion();
+        }
+      });
+
+      // Close mobile drawer when clicking any link inside
       const drawerLinks = mobileDrawer.querySelectorAll('a');
       drawerLinks.forEach(link => {
         link.addEventListener('click', closeDrawer);

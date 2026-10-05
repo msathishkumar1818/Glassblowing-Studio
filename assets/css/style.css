@@ -346,15 +346,98 @@ html:not(.dark) .font-editorial-text:not(.dark-section *):not(.hero-dark *):not(
 }
 
 /* Badges / Status Pills on light surfaces */
-html:not(.dark) .rounded-full[class*="border"]:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(#enquiry-form *):not(.hero-overlay-card *) {
+html:not(.dark) .rounded-full[class*="border"]:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(#enquiry-form *):not(.hero-overlay-card *):not(.image-overlay-pill):not(.image-overlay-pill *):not([class*="aspect-"] *):not(.monograph-edition-card *) {
   color: #4D2E5C !important;
   background-color: rgba(155, 145, 202, 0.18) !important;
   border-color: rgba(155, 145, 202, 0.45) !important;
 }
 
-html:not(.dark) .rounded-full[class*="border"]:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(#enquiry-form *):not(.hero-overlay-card *) span {
+html:not(.dark) .rounded-full[class*="border"]:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(#enquiry-form *):not(.hero-overlay-card *):not(.image-overlay-pill):not(.image-overlay-pill *):not([class*="aspect-"] *):not(.monograph-edition-card *) span {
   color: #4D2E5C !important;
   font-weight: 700 !important;
+}
+
+/* ==========================================================================
+   IMAGE OVERLAY BADGES & PILLS (ALWAYS PUNCHY, HIGH-CONTRAST & WHITE ON PHOTO STAGES)
+   ========================================================================== */
+.image-overlay-pill,
+[class*="aspect-"] .rounded-full,
+.monograph-edition-card [class*="aspect-"] .rounded-full {
+  background-color: rgba(12, 10, 16, 0.90) !important;
+  color: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5) !important;
+}
+
+.image-overlay-pill *,
+.image-overlay-pill span,
+[class*="aspect-"] .rounded-full *,
+[class*="aspect-"] .rounded-full span,
+.monograph-edition-card [class*="aspect-"] .rounded-full *,
+.monograph-edition-card [class*="aspect-"] .rounded-full span {
+  color: #FFFFFF !important;
+  font-weight: 900 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Urgency / Critical Alert Pill on Images (ONLY 1 LEFT / NEW RELEASE) */
+.image-overlay-pill.badge-urgent,
+[class*="aspect-"] .badge-urgent,
+.monograph-edition-card [class*="aspect-"] .badge-urgent {
+  background-color: #BE185D !important;
+  color: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.6) !important;
+  box-shadow: 0 4px 14px rgba(190, 24, 93, 0.5) !important;
+}
+
+.image-overlay-pill.badge-urgent *,
+.image-overlay-pill.badge-urgent span,
+[class*="aspect-"] .badge-urgent *,
+[class*="aspect-"] .badge-urgent span,
+.monograph-edition-card [class*="aspect-"] .badge-urgent *,
+.monograph-edition-card [class*="aspect-"] .badge-urgent span {
+  color: #FFFFFF !important;
+  font-weight: 900 !important;
+}
+
+/* Purple Monolith Badge on Images (4 AVAILABLE) */
+.image-overlay-pill.badge-primary,
+[class*="aspect-"] .badge-primary,
+.monograph-edition-card [class*="aspect-"] .badge-primary {
+  background-color: #7C3AED !important;
+  color: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.6) !important;
+  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.5) !important;
+}
+
+.image-overlay-pill.badge-primary *,
+.image-overlay-pill.badge-primary span,
+[class*="aspect-"] .badge-primary *,
+[class*="aspect-"] .badge-primary span,
+.monograph-edition-card [class*="aspect-"] .badge-primary *,
+.monograph-edition-card [class*="aspect-"] .badge-primary span {
+  color: #FFFFFF !important;
+  font-weight: 900 !important;
+}
+
+/* Rose Canes Badge on Images (8 AVAILABLE) */
+.image-overlay-pill.badge-rose,
+[class*="aspect-"] .badge-rose,
+.monograph-edition-card [class*="aspect-"] .badge-rose {
+  background-color: #9D174D !important;
+  color: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.6) !important;
+  box-shadow: 0 4px 14px rgba(157, 23, 77, 0.5) !important;
+}
+
+.image-overlay-pill.badge-rose *,
+.image-overlay-pill.badge-rose span,
+[class*="aspect-"] .badge-rose *,
+[class*="aspect-"] .badge-rose span,
+.monograph-edition-card [class*="aspect-"] .badge-rose *,
+.monograph-edition-card [class*="aspect-"] .badge-rose span {
+  color: #FFFFFF !important;
+  font-weight: 900 !important;
 }
 
 /* Secondary Button on light surfaces */
@@ -940,20 +1023,74 @@ header .btn-primary {
   flex-shrink: 0 !important;
 }
 
+.header-cta-btn {
+  background: linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%) !important;
+  color: #FFFFFF !important;
+  padding: 0.28rem 0.7rem !important;
+  font-weight: 700 !important;
+  font-size: 0.625rem !important; /* 10px compact */
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  border-radius: 9999px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.25rem !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.25) !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+}
+
+@media (max-width: 1023px) {
+  .header-cta-btn {
+    display: none !important;
+  }
+}
+
+.header-cta-btn:hover {
+  background: linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%) !important;
+  box-shadow: 0 3px 12px rgba(124, 58, 237, 0.45) !important;
+  transform: translateY(-1px) !important;
+  color: #FFFFFF !important;
+}
+
+.header-cta-btn:active {
+  transform: translateY(0) !important;
+}
+
+.header-cta-btn svg {
+  width: 0.75rem !important; /* 12px */
+  height: 0.75rem !important;
+  transition: transform 0.2s ease !important;
+}
+
+.header-cta-btn:hover svg {
+  transform: translateX(2px) !important;
+}
+
+[dir="rtl"] .header-cta-btn:hover svg {
+  transform: translateX(-2px) !important;
+}
+
 /* ==========================================================================
    THEME & RTL TOGGLE CONTROLS — STRICT PALETTE ACTIVE STATES
    ========================================================================== */
 .dir-toggle-btn,
 .theme-toggle-btn {
-  width: 2.375rem !important; /* 38px */
-  height: 2.375rem !important;
-  min-width: 2.375rem !important;
-  min-height: 2.375rem !important;
+  width: 2rem !important; /* 32px compact */
+  height: 2rem !important;
+  min-width: 2rem !important;
+  min-height: 2rem !important;
   border-radius: 9999px !important; /* Identical perfect circle */
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
   padding: 0 !important;
+  margin: 0 !important;
   cursor: pointer !important;
   outline: none !important;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
@@ -961,15 +1098,26 @@ header .btn-primary {
   flex-shrink: 0 !important;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
   font-weight: 900 !important;
-  font-size: 0.75rem !important; /* 12px */
-  letter-spacing: 0.04em !important;
+  font-size: 0.6875rem !important; /* 11px */
+  letter-spacing: 0.02em !important;
   user-select: none !important;
 }
 
-/* 12px Gap Between Toggle Buttons */
+.theme-toggle-btn svg {
+  width: 0.875rem !important; /* 14px */
+  height: 0.875rem !important;
+}
+
+/* Remove double-gap between toggle buttons */
 .dir-toggle-btn + .theme-toggle-btn,
 .theme-toggle-btn + .dir-toggle-btn {
-  margin-inline-start: 0.75rem !important;
+  margin-inline-start: 0 !important;
+}
+
+/* Tight, balanced gap between header controls */
+header .hidden.lg\:flex.items-center,
+header .flex.items-center.lg\:hidden {
+  gap: 0.5rem !important;
 }
 
 /* Light Mode — Both Buttons Identical Matching Luxury Finish */
@@ -2027,15 +2175,17 @@ a[class*="mt-auto"] {
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   background-color: #FFFFFF !important;
-  color: #18131F !important;
-  border-color: rgba(155, 145, 202, 0.45) !important;
-  box-shadow: 0 2px 6px rgba(24, 19, 31, 0.04);
+  color: #110E17 !important;
+  font-weight: 800 !important;
+  border: 2px solid #8B5CF6 !important;
+  box-shadow: 0 2px 8px rgba(24, 19, 31, 0.08);
 }
 
 html.dark .edition-filter-tab {
   background-color: #221B2B !important;
   color: #FFFFFF !important;
-  border-color: rgba(255, 255, 255, 0.25) !important;
+  font-weight: 800 !important;
+  border: 2px solid rgba(255, 255, 255, 0.35) !important;
 }
 
 /* Inactive Hover State */

@@ -367,7 +367,7 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         if (submitBtn) {
           submitBtn.disabled = false;
-          submitBtn.innerHTML = '✓ Enquiry Received by Gaffer';
+          submitBtn.innerHTML = '<svg class="w-4 h-4 inline-block -mt-0.5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg> Enquiry Received by Gaffer';
           submitBtn.classList.add('bg-[#7A6986]', 'text-white', 'border-[#AB95CF]');
         }
 
@@ -834,7 +834,7 @@ document.addEventListener('DOMContentLoaded', () => {
         monographCards.forEach(card => {
           const category = card.getAttribute('data-edition-category');
           if (filter === 'all' || category === filter) {
-            card.style.display = 'block';
+            card.style.display = 'flex';
             card.style.opacity = '0';
             card.style.transform = 'translateY(12px)';
             setTimeout(() => {
