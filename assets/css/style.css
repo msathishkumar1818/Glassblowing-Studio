@@ -2406,34 +2406,34 @@ html.dark .text-\[\#F3E9F1\],
 }
 
 /* 4. High-Contrast replacement for soft purple/gray classes in Light Mode */
-html:not(.dark) .text-\[\#7A6986\]:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(.image-overlay-pill *) {
+html:not(.dark) .text-\[\#7A6986\]:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(.image-overlay-pill *):not([class*="aspect-"] *):not(.artisan-role-badge *) {
   color: #2E1065 !important;
   font-weight: 750 !important;
 }
 
-html:not(.dark) .text-\[\#9B91CA\]:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(.image-overlay-pill *) {
+html:not(.dark) .text-\[\#9B91CA\]:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(.image-overlay-pill *):not([class*="aspect-"] *):not(.artisan-role-badge *) {
   color: #581C87 !important;
   font-weight: 800 !important;
 }
 
-html:not(.dark) .text-\[\#C4BAFA\]:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(.image-overlay-pill *) {
+html:not(.dark) .text-\[\#C4BAFA\]:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(.image-overlay-pill *):not([class*="aspect-"] *):not(.artisan-role-badge *) {
   color: #4C1D95 !important;
   font-weight: 750 !important;
 }
 
-html:not(.dark) .text-\[\#C3A9D0\]:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(.image-overlay-pill *) {
+html:not(.dark) .text-\[\#C3A9D0\]:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(.image-overlay-pill *):not([class*="aspect-"] *):not(.artisan-role-badge *) {
   color: #38104E !important;
   font-weight: 750 !important;
 }
 
 /* 5. Light Mode Body & Paragraph Clarity Boost */
-html:not(.dark) p:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(#enquiry-form *):not(.image-overlay-pill *),
-html:not(.dark) li:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(#enquiry-form *):not(.image-overlay-pill *) {
+html:not(.dark) p:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(#enquiry-form *):not(.image-overlay-pill *):not([class*="aspect-"] *):not(.artisan-role-badge *),
+html:not(.dark) li:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(#enquiry-form *):not(.image-overlay-pill *):not([class*="aspect-"] *):not(.artisan-role-badge *) {
   color: #120D1A !important;
   font-weight: 600 !important;
 }
 
-html:not(.dark) .font-editorial-text:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(#enquiry-form *):not(.image-overlay-pill *) {
+html:not(.dark) .font-editorial-text:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(#enquiry-form *):not(.image-overlay-pill *):not([class*="aspect-"] *):not(.artisan-role-badge *) {
   color: #120D1A !important;
   font-weight: 600 !important;
 }
@@ -2448,9 +2448,38 @@ html.dark .font-mono,
   font-weight: 800 !important;
 }
 
-html:not(.dark) span.font-mono:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(.image-overlay-pill *) {
+html:not(.dark) span.font-mono:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(.image-overlay-pill *):not([class*="aspect-"] *):not(.artisan-role-badge *) {
   color: #3B1C52 !important;
   font-weight: 800 !important;
+}
+
+/* ==========================================================================
+   ARTISAN ROLE BADGES (FOUNDER & GAFFER, HOT SHOP LEAD, COLD SHOP MASTER)
+   Always solid obsidian, with 100% pure bright white text in ALL modes
+   ========================================================================== */
+.artisan-role-badge,
+[class*="aspect-"] .artisan-role-badge,
+.artisan-role-badge *,
+[class*="aspect-"] .artisan-role-badge * {
+  background-color: rgba(12, 10, 16, 0.92) !important;
+  color: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.6) !important;
+  font-weight: 900 !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6) !important;
+}
+
+html:not(.dark) .artisan-role-badge,
+html:not(.dark) [class*="aspect-"] .artisan-role-badge,
+html:not(.dark) .artisan-role-badge *,
+html:not(.dark) [class*="aspect-"] .artisan-role-badge *,
+html.dark .artisan-role-badge,
+html.dark [class*="aspect-"] .artisan-role-badge,
+html.dark .artisan-role-badge *,
+html.dark [class*="aspect-"] .artisan-role-badge * {
+  background-color: rgba(12, 10, 16, 0.92) !important;
+  color: #FFFFFF !important;
+  font-weight: 900 !important;
 }
 
 /* 7. Ensure gradient texts ALWAYS preserve background-clip */
