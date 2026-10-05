@@ -285,52 +285,83 @@
          SECTION 01: GALLERY INTRODUCTION & DYNAMIC LIVE FILTER BAR
          ==================================================================== -->
     <section
-      class="py-16 lg:py-20 bg-white dark:bg-[#1D1725] border-b border-[#9B91CA]/15 dark:border-[#C3A9D0]/10 transition-colors">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      class="hero-dark subpage-hero-unified relative py-12 lg:py-16 bg-[#18131F] text-white border-b border-[#9B91CA]/20 overflow-hidden">
+      <!-- Ambient Glow Orbs -->
+      <div class="absolute top-1/4 left-1/3 w-80 h-80 bg-[#9B91CA]/15 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute bottom-0 right-10 w-96 h-96 bg-[#FFD4EC]/10 rounded-full blur-3xl pointer-events-none"></div>
 
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10" data-anim="fade-up">
-          <div class="space-y-3 max-w-2xl text-left rtl:text-right">
-            <span class="text-xs uppercase font-mono tracking-widest text-[#C4BAFA] font-bold">PERMANENT &amp; LIMITED
-              WORKS</span>
-            <h1 class="hero-heading font-serif-title text-4xl sm:text-6xl font-bold text-[#18131F] dark:text-[#FFFFFF]">
-              THE CURATORIAL GALLERY ARCHIVE
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+          <!-- Left Column: Title, Subtitle, and Filter Pills (8 cols for single line fit) -->
+          <div class="lg:col-span-8 space-y-6 text-left rtl:text-right" data-anim="fade-up">
+            <div
+              class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#9B91CA]/20 border border-[#9B91CA]/40 text-[#FFD4EC] text-xs font-mono font-bold shadow-md">
+              <span class="w-2 h-2 rounded-full bg-[#FFD4EC] animate-ping"></span>
+              <span>PERMANENT &amp; LIMITED WORKS • 2026 ARCHIVE</span>
+            </div>
+
+            <h1 class="hero-heading font-serif-title text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
+              THE CURATORIAL <span class="lavender-gradient-text">GALLERY ARCHIVE</span>.
             </h1>
-            <p class="font-editorial-text text-lg sm:text-xl text-[#221B2B] dark:text-[#FFFFFF]">
-              Unique, one-of-a-kind masterworks blown at 1,150°C and hand cold-worked.
+
+            <p class="font-editorial-text text-lg sm:text-xl text-[#F3E9F1] max-w-2xl leading-relaxed">
+              Unique, one-of-a-kind masterworks blown at 1,150°C and hand cold-worked. Explore optical monoliths, incalmo vessels, and luminous kinetic sculptures.
             </p>
+
+            <!-- Filter Pills Bar & Counter Badge -->
+            <div class="space-y-2 pt-2">
+              <div class="flex items-center justify-between gap-4 flex-wrap pb-3.5">
+                <span class="text-xs uppercase font-mono tracking-widest text-[#C4BAFA] font-bold">SELECT CATEGORY</span>
+                <span id="gallery-count-badge"
+                  class="px-3.5 py-1 rounded-full bg-[#9B91CA]/20 border border-[#9B91CA]/40 text-xs font-mono font-bold text-[#FFD4EC]">
+                  8 Masterworks Displayed
+                </span>
+              </div>
+
+              <!-- Filter Pills (Strictly Single Line) -->
+              <div class="gallery-filter-bar flex items-center gap-2 sm:gap-2.5 pt-3.5 border-t border-[#9B91CA]/20 flex-nowrap overflow-x-auto no-scrollbar whitespace-nowrap" data-anim="fade-up">
+                <button type="button"
+                  class="gallery-filter-pill shrink-0 whitespace-nowrap px-3.5 sm:px-4 py-2 rounded-full text-xs font-mono font-bold tracking-wider bg-[#9B91CA] text-white border border-[#9B91CA] shadow-md transition-colors"
+                  data-filter="all">
+                  ALL MASTERWORKS
+                </button>
+                <button type="button"
+                  class="gallery-filter-pill shrink-0 whitespace-nowrap px-3.5 sm:px-4 py-2 rounded-full text-xs font-mono font-bold tracking-wider border border-[#9B91CA]/30 text-white hover:border-[#9B91CA] transition-colors"
+                  data-filter="vessel">
+                  SCULPTURAL VESSELS
+                </button>
+                <button type="button"
+                  class="gallery-filter-pill shrink-0 whitespace-nowrap px-3.5 sm:px-4 py-2 rounded-full text-xs font-mono font-bold tracking-wider border border-[#9B91CA]/30 text-white hover:border-[#9B91CA] transition-colors"
+                  data-filter="ornament">
+                  LUMINOUS ORNAMENTS
+                </button>
+                <button type="button"
+                  class="gallery-filter-pill shrink-0 whitespace-nowrap px-3.5 sm:px-4 py-2 rounded-full text-xs font-mono font-bold tracking-wider border border-[#9B91CA]/30 text-white hover:border-[#9B91CA] transition-colors"
+                  data-filter="sculpture">
+                  MONUMENTAL SCULPTURES
+                </button>
+              </div>
+            </div>
           </div>
 
-          <div class="flex items-center gap-3">
-            <span id="gallery-count-badge"
-              class="px-3.5 py-1.5 rounded-full bg-[#9B91CA]/15 border border-[#9B91CA]/40 text-xs font-mono font-bold text-[#C4BAFA]">
-              8 Masterworks Displayed
-            </span>
+          <!-- Right Column: Curatorial Highlight Showcase Card (4 cols) -->
+          <div class="lg:col-span-4" data-anim="reveal-3d">
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-[#9B91CA]/30 shadow-2xl relative group">
+              <img src="assets/images/p10.jpg" alt="Curator's spotlight glass sculpture"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#18131F]/90 via-[#18131F]/20 to-transparent"></div>
+              <div
+                class="absolute bottom-4 left-4 right-4 p-3.5 bg-[#18131F]/90 backdrop-blur-md rounded-xl border border-[#9B91CA]/30 text-xs font-mono space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="text-[#FFD4EC] uppercase font-bold">Curator's Spotlight</span>
+                  <span class="text-[#C4BAFA] text-[10px]">2026 Archive</span>
+                </div>
+                <p class="text-white font-serif text-sm">Prismatic Monolith No. 04</p>
+                <p class="text-[#D5C2FA] text-[11px] font-sans">Neodymium optic crystal with 72-hour lehr annealing.</p>
+              </div>
+            </div>
           </div>
-        </div>
-
-        <!-- Filter Pills Bar -->
-        <div class="flex flex-wrap gap-2 pt-4 border-t border-[#9B91CA]/15 dark:border-[#C3A9D0]/10"
-          data-anim="fade-up">
-          <button type="button"
-            class="gallery-filter-pill px-4 py-2 rounded-full text-xs font-mono font-bold tracking-wider bg-[#9B91CA] text-white border border-[#9B91CA] transition-colors"
-            data-filter="all">
-            ALL MASTERWORKS
-          </button>
-          <button type="button"
-            class="gallery-filter-pill px-4 py-2 rounded-full text-xs font-mono font-bold tracking-wider border border-[#9B91CA]/30 dark:border-[#C3A9D0]/20 text-[#221B2B] dark:text-[#FFFFFF] hover:border-[#9B91CA] transition-colors"
-            data-filter="vessel">
-            SCULPTURAL VESSELS
-          </button>
-          <button type="button"
-            class="gallery-filter-pill px-4 py-2 rounded-full text-xs font-mono font-bold tracking-wider border border-[#9B91CA]/30 dark:border-[#C3A9D0]/20 text-[#221B2B] dark:text-[#FFFFFF] hover:border-[#9B91CA] transition-colors"
-            data-filter="ornament">
-            LUMINOUS ORNAMENTS
-          </button>
-          <button type="button"
-            class="gallery-filter-pill px-4 py-2 rounded-full text-xs font-mono font-bold tracking-wider border border-[#9B91CA]/30 dark:border-[#C3A9D0]/20 text-[#221B2B] dark:text-[#FFFFFF] hover:border-[#9B91CA] transition-colors"
-            data-filter="sculpture">
-            MONUMENTAL SCULPTURES
-          </button>
         </div>
 
       </div>

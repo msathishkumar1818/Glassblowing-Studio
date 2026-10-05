@@ -142,7 +142,8 @@ footer p,
 footer li,
 footer a,
 footer span {
-  color: #F3E9F1 !important;
+  color: #FFFFFF !important;
+  font-weight: 500 !important;
 }
 
 /* Accents in dark sections */
@@ -273,7 +274,8 @@ footer .btn-secondary:hover span {
 .hero-overlay-card p,
 .thermal-overlay-badge p,
 .floating-overlay-card p {
-  color: #F3E9F1 !important;
+  color: #FFFFFF !important;
+  font-weight: 550 !important;
 }
 
 .hero-overlay-card span,
@@ -2243,3 +2245,221 @@ html.dark .edition-filter-tab.active:focus {
   color: #18131F !important;
   border-color: #FFD4EC !important;
 }
+
+/* ==========================================================================
+   VIEWPORT HEIGHT RULES:
+   1. Home pages hero occupies full viewport height based on screen size
+   2. All non-home pages first section have identical uniform height
+   ========================================================================== */
+.hero-full-viewport {
+  min-height: calc(100vh - 4rem) !important;
+  min-height: calc(100dvh - 4rem) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.subpage-hero-unified {
+  min-height: 520px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding-top: 3.5rem !important;
+  padding-bottom: 3.5rem !important;
+  overflow: hidden !important;
+}
+
+@media (min-width: 1024px) {
+  .subpage-hero-unified {
+    height: 580px !important;
+    min-height: 580px !important;
+    max-height: 580px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .subpage-hero-unified {
+    height: 600px !important;
+    min-height: 600px !important;
+    max-height: 600px !important;
+  }
+}
+
+/* Gallery Filter Pills Single Line Guarantee */
+.gallery-filter-bar {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  white-space: nowrap !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+.gallery-filter-bar .gallery-filter-pill {
+  flex-shrink: 0 !important;
+  white-space: nowrap !important;
+}
+
+/* Scrollbar Hide Utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+.no-scrollbar {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+/* ==========================================================================
+   MASTER TYPOGRAPHY BRIGHTNESS & HIGH-CONTRAST ENGINE
+   "text ellam bright ta irukunum, soft text bright ta irukunum, mute text bright ta irukunum"
+   ========================================================================== */
+
+/* 1. All Muted Text (.text-muted) - Universally High-Contrast & Crisp */
+.text-muted,
+[class*="text-muted"],
+.text-muted span,
+.text-muted p {
+  font-weight: 700 !important;
+}
+
+/* Dark mode & dark sections: Muted text is ultra-bright luminous rose-cream (#FFD4EC / #FFFFFF) */
+.hero-dark .text-muted,
+.dark-section .text-muted,
+.dark-card .text-muted,
+html.dark .text-muted,
+footer .text-muted,
+#mobile-drawer .text-muted,
+[class*="bg-[#18131F]"] .text-muted,
+[class*="bg-[#221B2B]"] .text-muted,
+[class*="bg-[#1D1725]"] .text-muted {
+  color: #FFD4EC !important;
+  font-weight: 700 !important;
+}
+
+/* Light mode & light sections: Muted text is deep, bold, crisp royal violet (#2E1065 / #38104E) */
+html:not(.dark) .text-muted:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(#enquiry-form *):not(.hero-overlay-card *) {
+  color: #2E1065 !important;
+  font-weight: 750 !important;
+}
+
+/* 2. Soft & Secondary Text in Dark Mode (Descriptions, subtitles, captions, specs) */
+html.dark p,
+.dark-section p,
+.hero-dark p,
+.dark-card p,
+footer p,
+#enquiry-form p,
+html.dark li,
+.dark-section li,
+.hero-dark li,
+.dark-card li,
+html.dark .font-editorial-text,
+.dark-section .font-editorial-text,
+.hero-dark .font-editorial-text,
+.dark-card .font-editorial-text {
+  color: #FFFFFF !important;
+  font-weight: 500 !important;
+}
+
+/* 3. High-Contrast replacement for soft purple/gray classes in Dark Mode */
+html.dark .text-\[\#7A6986\],
+.dark-section .text-\[\#7A6986\],
+.hero-dark .text-\[\#7A6986\],
+.dark-card .text-\[\#7A6986\] {
+  color: #FFD4EC !important;
+  font-weight: 700 !important;
+}
+
+html.dark .text-\[\#9B91CA\],
+.dark-section .text-\[\#9B91CA\],
+.hero-dark .text-\[\#9B91CA\],
+.dark-card .text-\[\#9B91CA\] {
+  color: #E9D5FF !important;
+  font-weight: 700 !important;
+}
+
+html.dark .text-\[\#C4BAFA\],
+.dark-section .text-\[\#C4BAFA\],
+.hero-dark .text-\[\#C4BAFA\],
+.dark-card .text-\[\#C4BAFA\] {
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+}
+
+html.dark .text-\[\#C3A9D0\],
+.dark-section .text-\[\#C3A9D0\],
+.hero-dark .text-\[\#C3A9D0\],
+.dark-card .text-\[\#C3A9D0\] {
+  color: #FFFFFF !important;
+  font-weight: 650 !important;
+}
+
+html.dark .text-\[\#F3E9F1\],
+.dark-section .text-\[\#F3E9F1\],
+.hero-dark .text-\[\#F3E9F1\],
+.dark-card .text-\[\#F3E9F1\] {
+  color: #FFFFFF !important;
+  font-weight: 550 !important;
+}
+
+/* 4. High-Contrast replacement for soft purple/gray classes in Light Mode */
+html:not(.dark) .text-\[\#7A6986\]:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(.image-overlay-pill *) {
+  color: #2E1065 !important;
+  font-weight: 750 !important;
+}
+
+html:not(.dark) .text-\[\#9B91CA\]:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(.image-overlay-pill *) {
+  color: #581C87 !important;
+  font-weight: 800 !important;
+}
+
+html:not(.dark) .text-\[\#C4BAFA\]:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(.image-overlay-pill *) {
+  color: #4C1D95 !important;
+  font-weight: 750 !important;
+}
+
+html:not(.dark) .text-\[\#C3A9D0\]:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(.image-overlay-pill *) {
+  color: #38104E !important;
+  font-weight: 750 !important;
+}
+
+/* 5. Light Mode Body & Paragraph Clarity Boost */
+html:not(.dark) p:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(#enquiry-form *):not(.image-overlay-pill *),
+html:not(.dark) li:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(#enquiry-form *):not(.image-overlay-pill *) {
+  color: #120D1A !important;
+  font-weight: 600 !important;
+}
+
+html:not(.dark) .font-editorial-text:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(#enquiry-form *):not(.image-overlay-pill *) {
+  color: #120D1A !important;
+  font-weight: 600 !important;
+}
+
+/* 6. Eyebrows & Monospace Micro-labels */
+html.dark span.font-mono,
+html.dark .font-mono,
+.dark-section span.font-mono,
+.hero-dark span.font-mono,
+.dark-card span.font-mono {
+  color: #FFD4EC !important;
+  font-weight: 800 !important;
+}
+
+html:not(.dark) span.font-mono:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(.image-overlay-pill *) {
+  color: #3B1C52 !important;
+  font-weight: 800 !important;
+}
+
+/* 7. Ensure gradient texts ALWAYS preserve background-clip */
+.lavender-gradient-text,
+.rose-gradient-text,
+.mauve-gradient-text,
+.fire-gradient-text {
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  font-weight: 850 !important;
+}
+
