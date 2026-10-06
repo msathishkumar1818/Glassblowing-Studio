@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+  <defs>
+    <!-- Background Radial Glow -->
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2D2338" />
+      <stop offset="70%" stop-color="#1B1424" />
+      <stop offset="100%" stop-color="#130E1A" />
+    </radialGradient>
+
+    <!-- Outer Rim Gradient -->
+    <linearGradient id="rimGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E1C5D4" />
+      <stop offset="35%" stop-color="#9B91CA" />
+      <stop offset="70%" stop-color="#6A5A80" />
+      <stop offset="100%" stop-color="#AB95CF" />
+    </linearGradient>
+
+    <!-- Molten Fire Core Gradient -->
+    <radialGradient id="moltenCore" cx="45%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#FFF5EA" stop-opacity="1" />
+      <stop offset="25%" stop-color="#FCD5B5" stop-opacity="0.95" />
+      <stop offset="55%" stop-color="#E29278" stop-opacity="0.9" />
+      <stop offset="85%" stop-color="#B8627D" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#7A4274" stop-opacity="0.8" />
+    </radialGradient>
+
+    <!-- Blown Glass Body Gradient -->
+    <linearGradient id="glassBodyGrad" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#CBBFE9" stop-opacity="0.95" />
+      <stop offset="40%" stop-color="#9B91CA" stop-opacity="0.85" />
+      <stop offset="70%" stop-color="#735F8E" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#4E3B68" stop-opacity="0.9" />
+    </linearGradient>
+
+    <!-- Swirling Glass Ribbon Gradient -->
+    <linearGradient id="ribbonGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#AB95CF" />
+      <stop offset="50%" stop-color="#E1C5D4" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+
+    <!-- Blowpipe Metallic Gradient -->
+    <linearGradient id="pipeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3E9F1" />
+      <stop offset="50%" stop-color="#B8ACC9" />
+      <stop offset="100%" stop-color="#6E5D7E" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Core Intense Glow Filter -->
+    <filter id="intenseGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4.5" result="blur1" />
+      <feGaussianBlur stdDeviation="1.5" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur1" />
+        <feMergeNode in="blur2" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Outer Disc / Base -->
+  <circle cx="60" cy="60" r="57" fill="url(#bgGlow)" />
+  <circle cx="60" cy="60" r="56.5" stroke="url(#rimGrad)" stroke-width="2" fill="none" opacity="0.9" />
+  
+  <!-- Subtle Inner Orbit / Craft Astrolabe Ring -->
+  <circle cx="60" cy="60" r="49" stroke="#9B91CA" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.35" fill="none" />
+
+  <!-- Background Molten Radiance Glow -->
+  <circle cx="65" cy="63" r="22" fill="#E29278" opacity="0.25" filter="url(#intenseGlow)" />
+  <circle cx="60" cy="60" r="16" fill="#AB95CF" opacity="0.35" filter="url(#intenseGlow)" />
+
+  <!-- ==========================================
+       THE BLOWN GLASS DROP / VESSEL (Murano droplet)
+       ========================================== -->
+  <!-- Outer Sculptural Drop -->
+  <path d="M 52,43 
+           C 40,55 37,73 49,84 
+           C 59,93 75,92 84,82 
+           C 93,72 92,56 80,47 
+           C 72,40 62,39 52,43 Z" 
+        fill="url(#glassBodyGrad)" 
+        stroke="#E1C5D4" 
+        stroke-width="1.2" 
+        stroke-opacity="0.6" />
+
+  <!-- Molten Core (Hot fire at center of blown bubble) -->
+  <path d="M 55,50 
+           C 47,58 45,70 53,77 
+           C 60,84 72,83 78,76 
+           C 84,68 83,57 74,51 
+           C 68,46 61,46 55,50 Z" 
+        fill="url(#moltenCore)" 
+        filter="url(#softGlow)" />
+
+  <!-- Core Incandescent Center -->
+  <ellipse cx="64" cy="64" rx="7" ry="9" transform="rotate(-25 64 64)" fill="#FFFFFF" opacity="0.9" filter="url(#softGlow)" />
+
+  <!-- ==========================================
+       THE GLASSBLOWER'S BLOWPIPE (Pontil / Pipe)
+       ========================================== -->
+  <!-- Pipe Shaft: Angled from top-left (20,18) down to gather collar (49,45) -->
+  <line x1="18" y1="17" x2="48" y2="44" stroke="url(#pipeGrad)" stroke-width="4.5" stroke-linecap="round" />
+  <line x1="19" y1="16" x2="47" y2="42" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" opacity="0.7" />
+
+  <!-- Blowpipe Gathering Collar / Nozzle -->
+  <ellipse cx="49" cy="45" rx="3.5" ry="5.5" transform="rotate(42 49 45)" fill="#F3E9F1" stroke="#9B91CA" stroke-width="1.2" />
+
+  <!-- Molten Joint / Gathering Point (Connecting pipe tip to vessel) -->
+  <path d="M 47,43 C 51,40 56,42 58,46 C 54,48 49,47 47,43 Z" fill="#FFE8D6" filter="url(#softGlow)" />
+
+  <!-- ==========================================
+       DYNAMIC SWIRLING GLASS RIBBON (Fluidity of Molten Glass)
+       ========================================== -->
+  <!-- Graceful ribbon wrapping around the vessel -->
+  <path d="M 36,66 
+           C 34,79 46,92 62,93 
+           C 78,94 92,84 94,68 
+           C 96,52 86,37 72,35 
+           C 63,34 57,37 54,41" 
+        fill="none" 
+        stroke="url(#ribbonGrad)" 
+        stroke-width="2.6" 
+        stroke-linecap="round" 
+        filter="url(#softGlow)" />
+
+  <!-- Inner Refraction Arc / Curvature Highlight -->
+  <path d="M 44,78 C 40,68 42,57 49,50" 
+        fill="none" 
+        stroke="#FFFFFF" 
+        stroke-width="1.8" 
+        stroke-linecap="round" 
+        opacity="0.8" />
+
+  <path d="M 68,86 C 78,81 83,72 84,62" 
+        fill="none" 
+        stroke="#E1C5D4" 
+        stroke-width="1.4" 
+        stroke-linecap="round" 
+        opacity="0.75" />
+
+  <!-- ==========================================
+       CELESTIAL ARTISAN SPARKLES (Finished Crystal Sheen)
+       ========================================== -->
+  <!-- Main 4-point Sparkle at upper right -->
+  <g transform="translate(86, 32)">
+    <path d="M 0,-7 Q 0,0 7,0 Q 0,0 0,7 Q 0,0 -7,0 Q 0,0 0,-7 Z" fill="#FFFFFF" filter="url(#softGlow)" />
+    <circle cx="0" cy="0" r="1.5" fill="#FFE8D6" />
+  </g>
+
+  <!-- Secondary delicate sparkle -->
+  <g transform="translate(32, 34) scale(0.6)">
+    <path d="M 0,-6 Q 0,0 6,0 Q 0,0 0,6 Q 0,0 -6,0 Q 0,0 0,-6 Z" fill="#E1C5D4" />
+  </g>
+
+  <!-- Molten Ember Particle -->
+  <circle cx="82" cy="74" r="1.2" fill="#FFE8D6" opacity="0.9" />
+  <circle cx="76" cy="24" r="1" fill="#CBBFE9" opacity="0.8" />
+  <circle cx="38" cy="88" r="1" fill="#E1C5D4" opacity="0.7" />
+</svg>

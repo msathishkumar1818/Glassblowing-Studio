@@ -253,9 +253,9 @@
       if (mobileBtn) mobileBtn.setAttribute('aria-expanded', 'false');
     }
 
-    // Auto-close mobile drawer if window resized to desktop
+    // Auto-close mobile drawer if window resized to true desktop (> 1380px)
     window.addEventListener('resize', () => {
-      if (window.innerWidth >= 1024) {
+      if (window.innerWidth > 1380) {
         closeDrawer();
       }
     });

@@ -1,12 +1,91 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="32" height="32">
   <defs>
-    <linearGradient id="lavenderGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#9B91CA" />
+    <!-- Background Radial Glow -->
+    <radialGradient id="favBgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2D2338" />
+      <stop offset="70%" stop-color="#1B1424" />
+      <stop offset="100%" stop-color="#130E1A" />
+    </radialGradient>
+
+    <!-- Outer Rim Gradient -->
+    <linearGradient id="favRimGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E1C5D4" />
+      <stop offset="35%" stop-color="#9B91CA" />
+      <stop offset="70%" stop-color="#6A5A80" />
       <stop offset="100%" stop-color="#AB95CF" />
     </linearGradient>
+
+    <!-- Molten Fire Core Gradient -->
+    <radialGradient id="favMoltenCore" cx="45%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#FFF5EA" stop-opacity="1" />
+      <stop offset="25%" stop-color="#FCD5B5" stop-opacity="0.95" />
+      <stop offset="55%" stop-color="#E29278" stop-opacity="0.9" />
+      <stop offset="85%" stop-color="#B8627D" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#7A4274" stop-opacity="0.8" />
+    </radialGradient>
+
+    <!-- Blown Glass Body Gradient -->
+    <linearGradient id="favGlassBodyGrad" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#CBBFE9" stop-opacity="0.95" />
+      <stop offset="40%" stop-color="#9B91CA" stop-opacity="0.85" />
+      <stop offset="70%" stop-color="#735F8E" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#4E3B68" stop-opacity="0.9" />
+    </linearGradient>
+
+    <!-- Swirling Glass Ribbon Gradient -->
+    <linearGradient id="favRibbonGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#AB95CF" />
+      <stop offset="50%" stop-color="#E1C5D4" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+
+    <!-- Blowpipe Metallic Gradient -->
+    <linearGradient id="favPipeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3E9F1" />
+      <stop offset="50%" stop-color="#B8ACC9" />
+      <stop offset="100%" stop-color="#6E5D7E" />
+    </linearGradient>
   </defs>
-  <circle cx="16" cy="16" r="16" fill="url(#lavenderGrad)" />
-  <g transform="translate(4, 4)">
-    <path fill="#FFFFFF" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+
+  <!-- Outer Disc / Base -->
+  <circle cx="60" cy="60" r="57" fill="url(#favBgGlow)" />
+  <circle cx="60" cy="60" r="56" stroke="url(#favRimGrad)" stroke-width="2.5" fill="none" opacity="0.95" />
+
+  <!-- The Blown Glass Drop Vessel -->
+  <path d="M 52,43 C 40,55 37,73 49,84 C 59,93 75,92 84,82 C 93,72 92,56 80,47 C 72,40 62,39 52,43 Z" 
+        fill="url(#favGlassBodyGrad)" 
+        stroke="#E1C5D4" 
+        stroke-width="1.5" />
+
+  <!-- Molten Core (Hot fire at center of blown bubble) -->
+  <path d="M 55,50 C 47,58 45,70 53,77 C 60,84 72,83 78,76 C 84,68 83,57 74,51 C 68,46 61,46 55,50 Z" 
+        fill="url(#favMoltenCore)" />
+
+  <!-- Core Incandescent Center -->
+  <ellipse cx="64" cy="64" rx="7" ry="9" transform="rotate(-25 64 64)" fill="#FFFFFF" opacity="0.95" />
+
+  <!-- Blowpipe: Angled from top-left (18,17) down to gather collar (49,45) -->
+  <line x1="18" y1="17" x2="48" y2="44" stroke="url(#favPipeGrad)" stroke-width="5" stroke-linecap="round" />
+  <line x1="19" y1="16" x2="47" y2="42" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" opacity="0.8" />
+  <ellipse cx="49" cy="45" rx="3.5" ry="5.5" transform="rotate(42 49 45)" fill="#F3E9F1" stroke="#9B91CA" stroke-width="1.2" />
+
+  <!-- Swirling Glass Ribbon -->
+  <path d="M 36,66 C 34,79 46,92 62,93 C 78,94 92,84 94,68 C 96,52 86,37 72,35 C 63,34 57,37 54,41" 
+        fill="none" 
+        stroke="url(#favRibbonGrad)" 
+        stroke-width="3" 
+        stroke-linecap="round" />
+
+  <!-- Glass Highlight -->
+  <path d="M 44,78 C 40,68 42,57 49,50" 
+        fill="none" 
+        stroke="#FFFFFF" 
+        stroke-width="2" 
+        stroke-linecap="round" 
+        opacity="0.85" />
+
+  <!-- Sparkle -->
+  <g transform="translate(86, 32)">
+    <path d="M 0,-7 Q 0,0 7,0 Q 0,0 0,7 Q 0,0 -7,0 Q 0,0 0,-7 Z" fill="#FFFFFF" />
   </g>
 </svg>

@@ -1252,8 +1252,8 @@ html[dir="rtl"] #mobile-drawer {
   pointer-events: auto !important;
 }
 
-/* On Desktop viewports (1024px+), mobile drawer and backdrop NEVER display */
-@media (min-width: 1024px) {
+/* On True Desktop viewports (1381px+), mobile drawer and backdrop NEVER display */
+@media (min-width: 1381px) {
   #mobile-drawer,
   #mobile-drawer-backdrop {
     display: none !important;
@@ -2491,4 +2491,212 @@ html.dark [class*="aspect-"] .artisan-role-badge * {
   background-clip: text !important;
   font-weight: 850 !important;
 }
+
+/* ==========================================================================
+   TABLET & IPAD SPECIFIC 2x2 FOOTER GRID (REFERENCE MODEL)
+   Specifically designed for:
+   - iPad Mini (768px / 1024px)
+   - iPad 9th/10th/Air (810px, 820px, 834px / 1080px, 1180px)
+   - Surface Pro 10 (912px portrait / 1368px landscape)
+   - iPad Pro 11" (834px / 1194px)
+   - iPad Pro 12.9" & iPad Pro 13" (1024px / 1366px)
+   ========================================================================== */
+.footer-responsive-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+@media (min-width: 768px) and (max-width: 1380px) {
+  .footer-responsive-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    column-gap: 3.5rem !important;
+    row-gap: 3rem !important;
+    align-items: start !important;
+  }
+
+  .footer-responsive-grid .footer-col-1 {
+    grid-column: 1 / 2 !important;
+    grid-row: 1 / 2 !important;
+  }
+
+  .footer-responsive-grid .footer-col-2 {
+    grid-column: 2 / 3 !important;
+    grid-row: 1 / 2 !important;
+  }
+
+  .footer-responsive-grid .footer-col-3 {
+    grid-column: 1 / 2 !important;
+    grid-row: 2 / 3 !important;
+  }
+
+  .footer-responsive-grid .footer-col-4 {
+    grid-column: 2 / 3 !important;
+    grid-row: 2 / 3 !important;
+  }
+
+  /* Tablet Font Size Increases (iPad, iPad Mini, iPad Pro, iPad Pro 13, Surface Pro 10) */
+  footer .footer-responsive-grid .font-serif-title {
+    font-size: 1.05rem !important;
+    letter-spacing: 0.1em !important;
+    font-weight: 700 !important;
+  }
+
+  footer .footer-responsive-grid .brand-logo-title {
+    font-size: 1.25rem !important;
+  }
+
+  footer .footer-responsive-grid .brand-logo-sub {
+    font-size: 0.72rem !important;
+    letter-spacing: 0.28em !important;
+  }
+
+  footer .footer-responsive-grid .font-editorial-text {
+    font-size: 1.15rem !important;
+    line-height: 1.6 !important;
+  }
+
+  footer .footer-responsive-grid .footer-col-1 p {
+    font-size: 0.95rem !important;
+    line-height: 1.65 !important;
+  }
+
+  footer .footer-responsive-grid .footer-col-1 a[aria-label] {
+    width: 2.65rem !important;
+    height: 2.65rem !important;
+  }
+
+  footer .footer-responsive-grid .footer-col-1 a[aria-label] svg {
+    width: 1.15rem !important;
+    height: 1.15rem !important;
+  }
+
+  footer .footer-responsive-grid .footer-col-2 ul li a {
+    font-size: 0.95rem !important;
+    line-height: 1.75 !important;
+    font-weight: 450 !important;
+    display: inline-block !important;
+  }
+
+  footer .footer-responsive-grid .footer-col-3 strong {
+    font-size: 0.95rem !important;
+    font-weight: 600 !important;
+  }
+
+  footer .footer-responsive-grid .footer-col-3 span {
+    font-size: 0.9rem !important;
+    line-height: 1.55 !important;
+  }
+
+  footer .footer-responsive-grid .footer-col-3 .font-mono {
+    font-size: 0.85rem !important;
+    padding: 0.35rem 0.8rem !important;
+  }
+
+  footer .footer-responsive-grid .footer-col-4 span.uppercase {
+    font-size: 0.78rem !important;
+    letter-spacing: 0.12em !important;
+    font-weight: 700 !important;
+  }
+
+  footer .footer-responsive-grid .footer-col-4 span,
+  footer .footer-responsive-grid .footer-col-4 a {
+    font-size: 0.925rem !important;
+    line-height: 1.55 !important;
+  }
+
+  footer .footer-responsive-grid .footer-col-4 svg {
+    width: 1.2rem !important;
+    height: 1.2rem !important;
+  }
+
+  footer .mt-12.pt-8,
+  footer .mt-12.pt-8 a,
+  footer .mt-12.pt-8 div {
+    font-size: 0.875rem !important;
+  }
+}
+
+@media (min-width: 1381px) {
+  .footer-responsive-grid {
+    display: grid !important;
+    grid-template-columns: 4fr 2.5fr 3fr 3.5fr !important;
+    gap: 2.5rem !important;
+    align-items: start !important;
+  }
+}
+
+/* ==========================================================================
+   HEADER MENU BUTTON & DRAWER FOR IPAD PRO 13 & TABLETS (UP TO 1380px)
+   Activates hamburger button in header for:
+   - iPad Pro 13" / 12.9" (1024px portrait / 1366px – 1376px landscape)
+   - Surface Pro 10 (912px portrait / 1368px landscape)
+   - iPad Pro 11" (834px / 1194px)
+   - iPad 10th / Air (820px / 1180px)
+   - iPad Mini (768px / 1024px)
+   ========================================================================== */
+@media (max-width: 1380px) {
+  /* Hide horizontal desktop nav links */
+  header nav.hidden.lg\:flex,
+  header nav.lg\:flex {
+    display: none !important;
+  }
+
+  /* Hide desktop right controls cluster */
+  header div.hidden.lg\:flex,
+  header div.lg\:flex.items-center.shrink-0 {
+    display: none !important;
+  }
+
+  /* Display mobile / tablet header controls with menu button */
+  header div.flex.items-center.lg\:hidden,
+  header div.lg\:hidden {
+    display: flex !important;
+  }
+
+  /* Prominent, touch-friendly menu button */
+  #mobile-menu-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0.5rem !important;
+    border-radius: 0.5rem !important;
+    cursor: pointer !important;
+    background-color: rgba(155, 145, 202, 0.12) !important;
+    border: 1px solid rgba(155, 145, 202, 0.25) !important;
+    transition: all 0.2s ease !important;
+  }
+
+  #mobile-menu-btn:hover {
+    background-color: rgba(155, 145, 202, 0.25) !important;
+    border-color: rgba(155, 145, 202, 0.45) !important;
+  }
+
+  #mobile-menu-btn svg {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+  }
+
+  /* Ensure drawer and backdrop elements are available */
+  #mobile-drawer.lg\:hidden,
+  #mobile-drawer {
+    display: flex !important;
+  }
+
+  #mobile-drawer-backdrop.lg\:hidden,
+  #mobile-drawer-backdrop {
+    display: block !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1380px) {
+  /* Roomier drawer width on iPad Pro 13 & tablet viewports */
+  #mobile-drawer {
+    width: 23rem !important;
+    max-width: 80vw !important;
+    padding: 2rem !important;
+  }
+}
+
 
