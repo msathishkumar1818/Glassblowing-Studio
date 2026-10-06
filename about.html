@@ -307,7 +307,7 @@
 
             <!-- Punchy Main Headline -->
             <h1
-              class="font-serif-title text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.1]">
+              class="font-serif-title text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white leading-tight">
               WHERE <span class="lavender-gradient-text">FIRE</span>, BREATH &amp; <span
                 class="text-[#FFD4EC]">FORM</span> CONVERGE.
             </h1>
@@ -623,13 +623,14 @@
         </div>
 
         <!-- 3 Artisan Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- 3 Artisan Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
 
           <!-- Artisan 1: Elena Vance -->
           <div
-            class="group rounded-2xl bg-white dark:bg-[#18131F] border border-[#9B91CA]/20 dark:border-[#C3A9D0]/15 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+            class="group rounded-2xl bg-white dark:bg-[#18131F] border border-[#9B91CA]/20 dark:border-[#C3A9D0]/15 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between h-full"
             data-anim="fade-up">
-            <div class="relative aspect-[4/5] overflow-hidden bg-[#221B2B]">
+            <div class="relative aspect-[4/5] overflow-hidden bg-[#221B2B] shrink-0">
               <img src="assets/images/team-elena-vance.jpg" alt="Master Gaffer Elena Vance"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
               <div class="absolute inset-0 bg-gradient-to-t from-[#18131F] via-transparent to-transparent opacity-75">
@@ -640,21 +641,23 @@
                   &amp; GAFFER</span>
               </div>
             </div>
-            <div class="p-6 space-y-2">
-              <h3 class="font-serif-title text-xl font-bold text-[#18131F] dark:text-white">ELENA VANCE</h3>
-              <p class="text-xs text-[#9B91CA] font-mono">Venetian Reticello &amp; Incalmo Specialist</p>
-              <p class="text-xs sm:text-sm text-[#7A6986] dark:text-[#C3A9D0] leading-relaxed pt-1">
-                24 years at the furnace. Trained in Murano and Seattle, Elena directs studio design and the proprietary
-                lavender color chemistry.
-              </p>
+            <div class="p-6 space-y-2 flex-1 flex flex-col justify-between">
+              <div class="space-y-1.5 flex-1 flex flex-col">
+                <h3 class="font-serif-title text-xl font-bold text-[#18131F] dark:text-white min-h-[1.75rem] flex items-center">ELENA VANCE</h3>
+                <p class="text-xs text-[#9B91CA] font-mono min-h-[2.5rem] flex items-start">Venetian Reticello &amp; Incalmo Specialist</p>
+                <p class="text-xs sm:text-sm text-[#7A6986] dark:text-[#C3A9D0] leading-relaxed pt-1 min-h-[5.5rem] flex items-start">
+                  24 years at the furnace. Trained in Murano and Seattle, Elena directs studio design and the proprietary
+                  lavender color chemistry.
+                </p>
+              </div>
             </div>
           </div>
 
           <!-- Artisan 2: Marcus Sterling -->
           <div
-            class="group rounded-2xl bg-white dark:bg-[#18131F] border border-[#9B91CA]/20 dark:border-[#C3A9D0]/15 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+            class="group rounded-2xl bg-white dark:bg-[#18131F] border border-[#9B91CA]/20 dark:border-[#C3A9D0]/15 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between h-full"
             data-anim="fade-up" style="animation-delay: 150ms;">
-            <div class="relative aspect-[4/5] overflow-hidden bg-[#221B2B]">
+            <div class="relative aspect-[4/5] overflow-hidden bg-[#221B2B] shrink-0">
               <img src="assets/images/team-marcus-sterling.jpg" alt="Senior Hot Shop Lead Marcus Sterling"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
               <div class="absolute inset-0 bg-gradient-to-t from-[#18131F] via-transparent to-transparent opacity-75">
@@ -665,21 +668,23 @@
                   SHOP LEAD</span>
               </div>
             </div>
-            <div class="p-6 space-y-2">
-              <h3 class="font-serif-title text-xl font-bold text-[#18131F] dark:text-white">MARCUS STERLING</h3>
-              <p class="text-xs text-[#AB95CF] font-mono">Monumental Blowing &amp; Lehr Dynamics</p>
-              <p class="text-xs sm:text-sm text-[#7A6986] dark:text-[#C3A9D0] leading-relaxed pt-1">
-                16 years hot shop experience. Specializes in large-volume vessel gathers, kinetic balances, and
-                high-temperature furnace mechanics.
-              </p>
+            <div class="p-6 space-y-2 flex-1 flex flex-col justify-between">
+              <div class="space-y-1.5 flex-1 flex flex-col">
+                <h3 class="font-serif-title text-xl font-bold text-[#18131F] dark:text-white min-h-[1.75rem] flex items-center">MARCUS STERLING</h3>
+                <p class="text-xs text-[#AB95CF] font-mono min-h-[2.5rem] flex items-start">Monumental Blowing &amp; Lehr Dynamics</p>
+                <p class="text-xs sm:text-sm text-[#7A6986] dark:text-[#C3A9D0] leading-relaxed pt-1 min-h-[5.5rem] flex items-start">
+                  16 years hot shop experience. Specializes in large-volume vessel gathers, kinetic balances, and
+                  high-temperature furnace mechanics.
+                </p>
+              </div>
             </div>
           </div>
 
           <!-- Artisan 3: Sofia Chen -->
           <div
-            class="group rounded-2xl bg-white dark:bg-[#18131F] border border-[#9B91CA]/20 dark:border-[#C3A9D0]/15 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+            class="group rounded-2xl bg-white dark:bg-[#18131F] border border-[#9B91CA]/20 dark:border-[#C3A9D0]/15 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between h-full"
             data-anim="fade-up" style="animation-delay: 300ms;">
-            <div class="relative aspect-[4/5] overflow-hidden bg-[#221B2B]">
+            <div class="relative aspect-[4/5] overflow-hidden bg-[#221B2B] shrink-0">
               <img src="assets/images/team-sofia-chen.jpg" alt="Cold Shop Director Sofia Chen"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
               <div class="absolute inset-0 bg-gradient-to-t from-[#18131F] via-transparent to-transparent opacity-75">
@@ -690,13 +695,15 @@
                   SHOP MASTER</span>
               </div>
             </div>
-            <div class="p-6 space-y-2">
-              <h3 class="font-serif-title text-xl font-bold text-[#18131F] dark:text-white">SOFIA CHEN</h3>
-              <p class="text-xs text-[#7A6986] dark:text-[#C4BAFA] font-mono">Architectural Liaison &amp; Engraving</p>
-              <p class="text-xs sm:text-sm text-[#7A6986] dark:text-[#C3A9D0] leading-relaxed pt-1">
-                Sculptor and lapidary artisan. Sofia oversees diamond-wheel faceting, architectural hardware
-                integration, and museum-grade finishes.
-              </p>
+            <div class="p-6 space-y-2 flex-1 flex flex-col justify-between">
+              <div class="space-y-1.5 flex-1 flex flex-col">
+                <h3 class="font-serif-title text-xl font-bold text-[#18131F] dark:text-white min-h-[1.75rem] flex items-center">SOFIA CHEN</h3>
+                <p class="text-xs text-[#7A6986] dark:text-[#C4BAFA] font-mono min-h-[2.5rem] flex items-start">Architectural Liaison &amp; Engraving</p>
+                <p class="text-xs sm:text-sm text-[#7A6986] dark:text-[#C3A9D0] leading-relaxed pt-1 min-h-[5.5rem] flex items-start">
+                  Sculptor and lapidary artisan. Sofia oversees diamond-wheel faceting, architectural hardware
+                  integration, and museum-grade finishes.
+                </p>
+              </div>
             </div>
           </div>
 
