@@ -360,6 +360,36 @@ html:not(.dark) .rounded-full[class*="border"]:not(.dark-section *):not(.hero-da
 }
 
 /* ==========================================================================
+   DARK CARDS & OVERLAYS ON LIGHT/DARK SURFACES (ALWAYS CRISP WHITE TEXT)
+   ========================================================================== */
+.dark-card h1,
+.dark-card h2,
+.dark-card h3,
+.dark-card h4,
+.dark-card h5,
+.dark-card h6,
+.dark-card .font-serif-title {
+  color: #FFFFFF !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75) !important;
+}
+
+.dark-card p,
+.dark-card .font-sans {
+  color: #F3E9F1 !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.65) !important;
+}
+
+.dark-card span {
+  color: #FFFFFF !important;
+}
+
+.dark-card span[class*="FFD4EC"],
+.dark-card .text-pillar-pink {
+  color: #FFD4EC !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7) !important;
+}
+
+/* ==========================================================================
    IMAGE OVERLAY BADGES & PILLS (ALWAYS PUNCHY, HIGH-CONTRAST & WHITE ON PHOTO STAGES)
    ========================================================================== */
 .image-overlay-pill,

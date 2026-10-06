@@ -66,13 +66,16 @@
         <div
           class="w-20 h-20 rounded-full border-2 border-t-[#9B91CA] border-r-[#E1C5D4] border-b-[#AB95CF] border-l-transparent animate-spin">
         </div>
-        <div class="relative z-10 w-14 h-14 rounded-full overflow-hidden shadow-[0_0_20px_rgba(155,145,202,0.6)] animate-pulse">
+        <div
+          class="relative z-10 w-14 h-14 rounded-full overflow-hidden shadow-[0_0_20px_rgba(155,145,202,0.6)] animate-pulse">
           <img src="assets/images/logo.svg" alt="Glassblowing Studio Logo" class="w-full h-full object-cover">
         </div>
       </div>
       <div class="flex flex-col items-center text-center">
-        <span class="font-serif-title font-bold text-sm tracking-widest text-[#F3E9F1] uppercase">GLASSBLOWING STUDIO</span>
-        <span class="font-serif-title text-[10px] tracking-[0.25em] text-[#9B91CA] uppercase mt-1 animate-pulse">Forging Molten Glass...</span>
+        <span class="font-serif-title font-bold text-sm tracking-widest text-[#F3E9F1] uppercase">GLASSBLOWING
+          STUDIO</span>
+        <span class="font-serif-title text-[10px] tracking-[0.25em] text-[#9B91CA] uppercase mt-1 animate-pulse">Forging
+          Molten Glass...</span>
       </div>
     </div>
   </div>
@@ -89,7 +92,8 @@
         <a href="index.html"
           class="flex items-center gap-2.5 sm:gap-3 group focus:outline-none shrink-0 whitespace-nowrap"
           aria-label="Glassblowing Studio Home">
-          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden ring-1 ring-[#9B91CA]/40 shadow-md group-hover:scale-105 group-hover:shadow-[0_0_15px_rgba(155,145,202,0.5)] transition-all shrink-0">
+          <div
+            class="w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden ring-1 ring-[#9B91CA]/40 shadow-md group-hover:scale-105 group-hover:shadow-[0_0_15px_rgba(155,145,202,0.5)] transition-all shrink-0">
             <img src="assets/images/logo.svg" alt="Glassblowing Studio Logo" class="w-full h-full object-cover">
           </div>
           <div class="flex flex-col">
@@ -412,86 +416,134 @@
           </p>
         </div>
 
-        <!-- 3 Interactive Pillar Cards -->
+        <!-- 3 Interactive Pillar Cards (With Generated Background Images & Text Overlay) -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-          <!-- Pillar 1: Fire & Crucible -->
+          <!-- Pillar 1: Molten Alchemy -->
           <div
-            class="group relative rounded-2xl p-7 bg-white dark:bg-[#18131F] border border-[#9B91CA]/20 dark:border-[#C3A9D0]/15 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5"
+            class="dark-card group relative rounded-3xl overflow-hidden border border-[#9B91CA]/30 shadow-xl hover:shadow-[0_20px_40px_-15px_rgba(155,145,202,0.45)] transition-all duration-500 hover:-translate-y-2 min-h-[360px] sm:min-h-[390px] flex flex-col justify-between bg-[#18131F]"
             data-anim="fade-up">
+            <!-- Background Image -->
+            <img src="assets/images/pillar1_molten_alchemy.jpg" alt="Molten Alchemy Crucible"
+              class="absolute inset-0 w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out">
+            <!-- Gradient Overlay for Contrast -->
             <div
-              class="w-12 h-12 rounded-xl bg-gradient-to-tr from-[#9B91CA] to-[#AB95CF] flex items-center justify-center text-white mb-5 shadow-md group-hover:scale-110 transition-transform">
-              <!-- Flame Icon -->
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343a7.975 7.975 0 012.344 5.657 7.975 7.975 0 01-2.343 5.657z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
-              </svg>
+              class="absolute inset-0 bg-gradient-to-t from-[#18131F]/95 via-[#18131F]/80 to-[#18131F]/40 pointer-events-none">
             </div>
-            <span class="text-[11px] font-mono font-bold tracking-widest text-[#9B91CA] uppercase block mb-1">PILLAR
-              01</span>
-            <h3 class="font-serif-title text-xl font-bold text-[#18131F] dark:text-white mb-3">MOLTEN ALCHEMY</h3>
-            <p class="text-xs sm:text-sm text-[#7A6986] dark:text-[#C3A9D0] leading-relaxed">
-              We melt pure silica sand and custom mineral oxides at 2,100°F. Our signature lavender and deep mauve
-              formulas produce rare optical depth and internal refraction.
-            </p>
+
+            <!-- Content Over Image -->
             <div
-              class="mt-5 pt-4 border-t border-[#9B91CA]/15 flex items-center justify-between text-[11px] font-mono text-[#7A6986] dark:text-[#C4BAFA]">
-              <span>Continuous Kilns</span>
-              <span class="font-bold text-[#9B91CA]">2,100°F</span>
+              class="relative z-10 p-6 sm:p-7 flex flex-col justify-between h-full text-left rtl:text-right space-y-4">
+              <div>
+                <div
+                  class="w-11 h-11 rounded-2xl bg-white/15 backdrop-blur-md border border-white/25 flex items-center justify-center text-white mb-3.5 shadow-lg group-hover:scale-110 transition-transform">
+                  <!-- Flame Icon -->
+                  <svg class="w-5 h-5 text-[#FFD4EC]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343a7.975 7.975 0 012.344 5.657 7.975 7.975 0 01-2.343 5.657z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
+                  </svg>
+                </div>
+                <span class="text-[11px] font-mono font-bold tracking-widest uppercase block mb-1 drop-shadow"
+                  style="color: #FFD4EC !important;">PILLAR 01</span>
+                <h3 class="font-serif-title text-xl sm:text-2xl font-bold mb-2 drop-shadow-md"
+                  style="color: #FFFFFF !important;">
+                  MOLTEN ALCHEMY</h3>
+                <p class="text-xs sm:text-sm leading-relaxed font-sans drop-shadow" style="color: #F3E9F1 !important;">
+                  We melt pure silica sand and custom mineral oxides at 2,100°F. Our signature lavender and deep mauve
+                  formulas produce rare optical depth and internal refraction.
+                </p>
+              </div>
+
+              <div class="pt-3 border-t border-white/15 flex items-center justify-between text-[11px] font-mono">
+                <span style="color: rgba(255, 255, 255, 0.85) !important;">Continuous Kilns</span>
+                <span class="font-bold drop-shadow" style="color: #FFD4EC !important;">2,100°F</span>
+              </div>
             </div>
           </div>
 
-          <!-- Pillar 2: Breath & Rhythm -->
+          <!-- Pillar 2: Kinetic Breath -->
           <div
-            class="group relative rounded-2xl p-7 bg-white dark:bg-[#18131F] border border-[#9B91CA]/20 dark:border-[#C3A9D0]/15 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5"
+            class="dark-card group relative rounded-3xl overflow-hidden border border-[#9B91CA]/30 shadow-xl hover:shadow-[0_20px_40px_-15px_rgba(155,145,202,0.45)] transition-all duration-500 hover:-translate-y-2 min-h-[360px] sm:min-h-[390px] flex flex-col justify-between bg-[#18131F]"
             data-anim="fade-up" style="animation-delay: 150ms;">
+            <!-- Background Image -->
+            <img src="assets/images/pillar2_kinetic_breath.jpg" alt="Master Glassblower Kinetic Breath"
+              class="absolute inset-0 w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out">
+            <!-- Gradient Overlay for Contrast -->
             <div
-              class="w-12 h-12 rounded-xl bg-gradient-to-tr from-[#AB95CF] to-[#C3A9D0] flex items-center justify-center text-white mb-5 shadow-md group-hover:scale-110 transition-transform">
-              <!-- Wind/Breath Icon -->
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
+              class="absolute inset-0 bg-gradient-to-t from-[#18131F]/95 via-[#18131F]/80 to-[#18131F]/40 pointer-events-none">
             </div>
-            <span class="text-[11px] font-mono font-bold tracking-widest text-[#AB95CF] uppercase block mb-1">PILLAR
-              02</span>
-            <h3 class="font-serif-title text-xl font-bold text-[#18131F] dark:text-white mb-3">KINETIC BREATH</h3>
-            <p class="text-xs sm:text-sm text-[#7A6986] dark:text-[#C3A9D0] leading-relaxed">
-              No industrial molds. Each silhouette is coaxed entirely by hand rotation, lung pressure, and gravity.
-              Every piece captures the gaffer's vital breath in liquid crystal.
-            </p>
+
+            <!-- Content Over Image -->
             <div
-              class="mt-5 pt-4 border-t border-[#9B91CA]/15 flex items-center justify-between text-[11px] font-mono text-[#7A6986] dark:text-[#C4BAFA]">
-              <span>Mold-Free Freeform</span>
-              <span class="font-bold text-[#AB95CF]">100% Intuitive</span>
+              class="relative z-10 p-6 sm:p-7 flex flex-col justify-between h-full text-left rtl:text-right space-y-4">
+              <div>
+                <div
+                  class="w-11 h-11 rounded-2xl bg-white/15 backdrop-blur-md border border-white/25 flex items-center justify-center text-white mb-3.5 shadow-lg group-hover:scale-110 transition-transform">
+                  <!-- Wind/Breath Icon -->
+                  <svg class="w-5 h-5 text-[#FFD4EC]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </div>
+                <span class="text-[11px] font-mono font-bold tracking-widest uppercase block mb-1 drop-shadow"
+                  style="color: #FFD4EC !important;">PILLAR 02</span>
+                <h3 class="font-serif-title text-xl sm:text-2xl font-bold mb-2 drop-shadow-md"
+                  style="color: #FFFFFF !important;">
+                  KINETIC BREATH</h3>
+                <p class="text-xs sm:text-sm leading-relaxed font-sans drop-shadow" style="color: #F3E9F1 !important;">
+                  No industrial molds. Each silhouette is coaxed entirely by hand rotation, lung pressure, and gravity.
+                  Every piece captures the gaffer's vital breath in liquid crystal.
+                </p>
+              </div>
+
+              <div class="pt-3 border-t border-white/15 flex items-center justify-between text-[11px] font-mono">
+                <span style="color: rgba(255, 255, 255, 0.85) !important;">Mold Freeform</span>
+                <span class="font-bold drop-shadow" style="color: #FFD4EC !important;">Intuitive</span>
+              </div>
             </div>
           </div>
 
-          <!-- Pillar 3: Cold-Work Precision -->
+          <!-- Pillar 3: Lapidary Finish -->
           <div
-            class="group relative rounded-2xl p-7 bg-white dark:bg-[#18131F] border border-[#9B91CA]/20 dark:border-[#C3A9D0]/15 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5"
+            class="dark-card group relative rounded-3xl overflow-hidden border border-[#9B91CA]/30 shadow-xl hover:shadow-[0_20px_40px_-15px_rgba(155,145,202,0.45)] transition-all duration-500 hover:-translate-y-2 min-h-[360px] sm:min-h-[390px] flex flex-col justify-between bg-[#18131F]"
             data-anim="fade-up" style="animation-delay: 300ms;">
+            <!-- Background Image -->
+            <img src="assets/images/pillar3_lapidary_finish.jpg" alt="Artisan Lapidary Diamond Polishing"
+              class="absolute inset-0 w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out">
+            <!-- Gradient Overlay for Contrast -->
             <div
-              class="w-12 h-12 rounded-xl bg-gradient-to-tr from-[#7A6986] to-[#9B91CA] flex items-center justify-center text-white mb-5 shadow-md group-hover:scale-110 transition-transform">
-              <!-- Diamond / Precision Icon -->
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
+              class="absolute inset-0 bg-gradient-to-t from-[#18131F]/95 via-[#18131F]/80 to-[#18131F]/40 pointer-events-none">
             </div>
-            <span
-              class="text-[11px] font-mono font-bold tracking-widest text-[#7A6986] dark:text-[#C4BAFA] uppercase block mb-1">PILLAR
-              03</span>
-            <h3 class="font-serif-title text-xl font-bold text-[#18131F] dark:text-white mb-3">LAPIDARY FINISH</h3>
-            <p class="text-xs sm:text-sm text-[#7A6986] dark:text-[#C3A9D0] leading-relaxed">
-              After 18-hour annealing in digital lehrs, each piece undergoes diamond-wheel beveling, pumice stone
-              smoothing, and cerium oxide polishing for museum brilliance.
-            </p>
+
+            <!-- Content Over Image -->
             <div
-              class="mt-5 pt-4 border-t border-[#9B91CA]/15 flex items-center justify-between text-[11px] font-mono text-[#7A6986] dark:text-[#C4BAFA]">
-              <span>Cold Lapidary Cut</span>
-              <span class="font-bold text-[#7A6986] dark:text-[#C4BAFA]">Optical Grade</span>
+              class="relative z-10 p-6 sm:p-7 flex flex-col justify-between h-full text-left rtl:text-right space-y-4">
+              <div>
+                <div
+                  class="w-11 h-11 rounded-2xl bg-white/15 backdrop-blur-md border border-white/25 flex items-center justify-center text-white mb-3.5 shadow-lg group-hover:scale-110 transition-transform">
+                  <!-- Diamond / Precision Icon -->
+                  <svg class="w-5 h-5 text-[#FFD4EC]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <span class="text-[11px] font-mono font-bold tracking-widest uppercase block mb-1 drop-shadow"
+                  style="color: #FFD4EC !important;">PILLAR 03</span>
+                <h3 class="font-serif-title text-xl sm:text-2xl font-bold mb-2 drop-shadow-md"
+                  style="color: #FFFFFF !important;">
+                  LAPIDARY FINISH</h3>
+                <p class="text-xs sm:text-sm leading-relaxed font-sans drop-shadow" style="color: #F3E9F1 !important;">
+                  After 18-hour annealing in digital lehrs, each piece undergoes diamond-wheel beveling, pumice stone
+                  smoothing, and cerium oxide polishing for museum brilliance.
+                </p>
+              </div>
+
+              <div class="pt-3 border-t border-white/15 flex items-center justify-between text-[11px] font-mono">
+                <span style="color: rgba(255, 255, 255, 0.85) !important;">Cold Lapidary</span>
+                <span class="font-bold drop-shadow" style="color: #FFD4EC !important;">Optical</span>
+              </div>
             </div>
           </div>
 
@@ -643,10 +695,15 @@
             </div>
             <div class="p-6 space-y-2 flex-1 flex flex-col justify-between">
               <div class="space-y-1.5 flex-1 flex flex-col">
-                <h3 class="font-serif-title text-xl font-bold text-[#18131F] dark:text-white min-h-[1.75rem] flex items-center">ELENA VANCE</h3>
-                <p class="text-xs text-[#9B91CA] font-mono min-h-[2.5rem] flex items-start">Venetian Reticello &amp; Incalmo Specialist</p>
-                <p class="text-xs sm:text-sm text-[#7A6986] dark:text-[#C3A9D0] leading-relaxed pt-1 min-h-[5.5rem] flex items-start">
-                  24 years at the furnace. Trained in Murano and Seattle, Elena directs studio design and the proprietary
+                <h3
+                  class="font-serif-title text-xl font-bold text-[#18131F] dark:text-white min-h-[1.75rem] flex items-center">
+                  ELENA VANCE</h3>
+                <p class="text-xs text-[#9B91CA] font-mono min-h-[2.5rem] flex items-start">Venetian Reticello &amp;
+                  Incalmo Specialist</p>
+                <p
+                  class="text-xs sm:text-sm text-[#7A6986] dark:text-[#C3A9D0] leading-relaxed pt-1 min-h-[5.5rem] flex items-start">
+                  24 years at the furnace. Trained in Murano and Seattle, Elena directs studio design and the
+                  proprietary
                   lavender color chemistry.
                 </p>
               </div>
@@ -670,9 +727,13 @@
             </div>
             <div class="p-6 space-y-2 flex-1 flex flex-col justify-between">
               <div class="space-y-1.5 flex-1 flex flex-col">
-                <h3 class="font-serif-title text-xl font-bold text-[#18131F] dark:text-white min-h-[1.75rem] flex items-center">MARCUS STERLING</h3>
-                <p class="text-xs text-[#AB95CF] font-mono min-h-[2.5rem] flex items-start">Monumental Blowing &amp; Lehr Dynamics</p>
-                <p class="text-xs sm:text-sm text-[#7A6986] dark:text-[#C3A9D0] leading-relaxed pt-1 min-h-[5.5rem] flex items-start">
+                <h3
+                  class="font-serif-title text-xl font-bold text-[#18131F] dark:text-white min-h-[1.75rem] flex items-center">
+                  MARCUS </h3>
+                <p class="text-xs text-[#AB95CF] font-mono min-h-[2.5rem] flex items-start">Monumental Blowing &amp;
+                  Lehr Dynamics</p>
+                <p
+                  class="text-xs sm:text-sm text-[#7A6986] dark:text-[#C3A9D0] leading-relaxed pt-1 min-h-[5.5rem] flex items-start">
                   16 years hot shop experience. Specializes in large-volume vessel gathers, kinetic balances, and
                   high-temperature furnace mechanics.
                 </p>
@@ -697,9 +758,13 @@
             </div>
             <div class="p-6 space-y-2 flex-1 flex flex-col justify-between">
               <div class="space-y-1.5 flex-1 flex flex-col">
-                <h3 class="font-serif-title text-xl font-bold text-[#18131F] dark:text-white min-h-[1.75rem] flex items-center">SOFIA CHEN</h3>
-                <p class="text-xs text-[#7A6986] dark:text-[#C4BAFA] font-mono min-h-[2.5rem] flex items-start">Architectural Liaison &amp; Engraving</p>
-                <p class="text-xs sm:text-sm text-[#7A6986] dark:text-[#C3A9D0] leading-relaxed pt-1 min-h-[5.5rem] flex items-start">
+                <h3
+                  class="font-serif-title text-xl font-bold text-[#18131F] dark:text-white min-h-[1.75rem] flex items-center">
+                  SOFIA CHEN</h3>
+                <p class="text-xs text-[#7A6986] dark:text-[#C4BAFA] font-mono min-h-[2.5rem] flex items-start">
+                  Architectural Liaison &amp; Engraving</p>
+                <p
+                  class="text-xs sm:text-sm text-[#7A6986] dark:text-[#C3A9D0] leading-relaxed pt-1 min-h-[5.5rem] flex items-start">
                   Sculptor and lapidary artisan. Sofia oversees diamond-wheel faceting, architectural hardware
                   integration, and museum-grade finishes.
                 </p>
@@ -798,9 +863,11 @@
        FOOTER — IDENTICAL LUXURY ATELIER LAYOUT ACROSS ALL PAGES
        (Reference 2x2 Grid Model on iPad, iPad Mini, iPad Pro, iPad Pro 13, Surface Pro 10)
        ======================================================================== -->
-  <footer class="bg-[#18131F] text-[#FFFFFF] border-t border-[#9B91CA]/20 font-sans transition-colors relative overflow-hidden">
+  <footer
+    class="bg-[#18131F] text-[#FFFFFF] border-t border-[#9B91CA]/20 font-sans transition-colors relative overflow-hidden">
     <!-- Top Artisan Jewel Bar (matching stained-glass reference accent) -->
-    <div class="h-1 w-full bg-gradient-to-r from-[#9B91CA] via-[#E1C5D4] via-[#F3B084] via-[#AB95CF] to-[#7A6986]"></div>
+    <div class="h-1 w-full bg-gradient-to-r from-[#9B91CA] via-[#E1C5D4] via-[#F3B084] via-[#AB95CF] to-[#7A6986]">
+    </div>
 
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
       <div class="footer-responsive-grid">
@@ -809,7 +876,8 @@
         <div class="footer-col-1 space-y-4 text-left rtl:text-right">
           <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 group focus:outline-none shrink-0 inline-flex"
             aria-label="Glassblowing Studio Home">
-            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden ring-1 ring-[#9B91CA]/40 shadow-md group-hover:scale-105 group-hover:shadow-[0_0_15px_rgba(155,145,202,0.5)] transition-all shrink-0">
+            <div
+              class="w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden ring-1 ring-[#9B91CA]/40 shadow-md group-hover:scale-105 group-hover:shadow-[0_0_15px_rgba(155,145,202,0.5)] transition-all shrink-0">
               <img src="assets/images/logo.svg" alt="Glassblowing Studio Logo" class="w-full h-full object-cover">
             </div>
             <div class="flex flex-col">
@@ -824,7 +892,8 @@
             "Handblown glass shaped by fire, breath, and human hands."
           </p>
           <p class="text-xs text-[#FFFFFF] leading-relaxed max-w-sm">
-            Independent contemporary glass art studio, hot shop workshop, and bespoke architectural glass atelier. Every piece is a story told in fire, breath, and crystal.
+            Independent contemporary glass art studio, hot shop workshop, and bespoke architectural glass atelier. Every
+            piece is a story told in fire, breath, and crystal.
           </p>
           <!-- Social Icons in rounded pill/square boxes (matching reference image) -->
           <div class="flex items-center gap-2.5 pt-1">
@@ -832,21 +901,24 @@
               class="w-9 h-9 rounded-lg border border-[#9B91CA]/30 bg-[#241B2E] hover:bg-[#9B91CA]/20 hover:border-[#9B91CA] flex items-center justify-center text-[#C4BAFA] hover:text-white transition-all shadow-sm"
               aria-label="Instagram">
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.79-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.79-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
               </svg>
             </a>
             <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer"
               class="w-9 h-9 rounded-lg border border-[#9B91CA]/30 bg-[#241B2E] hover:bg-[#9B91CA]/20 hover:border-[#9B91CA] flex items-center justify-center text-[#C4BAFA] hover:text-white transition-all shadow-sm"
               aria-label="Pinterest">
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.291 1.199-.334 1.357-.053.225-.174.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 12-5.373 12-12 0-6.628-5.393-12-12-12z"/>
+                <path
+                  d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.291 1.199-.334 1.357-.053.225-.174.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 12-5.373 12-12 0-6.628-5.393-12-12-12z" />
               </svg>
             </a>
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
               class="w-9 h-9 rounded-lg border border-[#9B91CA]/30 bg-[#241B2E] hover:bg-[#9B91CA]/20 hover:border-[#9B91CA] flex items-center justify-center text-[#C4BAFA] hover:text-white transition-all shadow-sm"
               aria-label="Facebook">
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
               </svg>
             </a>
           </div>
@@ -890,7 +962,8 @@
               <span class="text-[#D5C2FA]">Saturday &amp; Sunday: 9:00 AM – 4:30 PM</span>
             </div>
             <div class="pt-1">
-              <span class="inline-block px-2.5 py-1 rounded bg-[#2D2338] border border-[#9B91CA]/30 font-mono text-[11px] text-[#FFD4EC] font-bold">
+              <span
+                class="inline-block px-2.5 py-1 rounded bg-[#2D2338] border border-[#9B91CA]/30 font-mono text-[11px] text-[#FFD4EC] font-bold">
                 FURNACE OPERATING: 1,150°C
               </span>
             </div>
@@ -913,7 +986,8 @@
               </svg>
               <div>
                 <span class="text-[10px] tracking-wider uppercase text-[#C4BAFA] font-bold block mb-0.5">LOCATION</span>
-                <span class="text-xs text-[#FFFFFF] leading-snug">742 Vulcan Foundry Way<br>Artisan Kiln District, Studio B4<br>San Francisco, CA 94107</span>
+                <span class="text-xs text-[#FFFFFF] leading-snug">742 Vulcan Foundry Way<br>Artisan Kiln District,
+                  Studio B4<br>San Francisco, CA 94107</span>
               </div>
             </div>
             <div class="flex items-start gap-2.5">
@@ -922,7 +996,8 @@
                   d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <div>
-                <span class="text-[10px] tracking-wider uppercase text-[#C4BAFA] font-bold block mb-0.5">OPENING HOURS</span>
+                <span class="text-[10px] tracking-wider uppercase text-[#C4BAFA] font-bold block mb-0.5">OPENING
+                  HOURS</span>
                 <span class="text-xs text-[#FFFFFF]">Mon–Fri: 9:30am – 5:30pm<br>Saturday: By Appointment</span>
               </div>
             </div>
@@ -932,9 +1007,11 @@
                   d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
               <div>
-                <span class="text-[10px] tracking-wider uppercase text-[#C4BAFA] font-bold block mb-0.5">PHONE &amp; EMAIL</span>
+                <span class="text-[10px] tracking-wider uppercase text-[#C4BAFA] font-bold block mb-0.5">PHONE &amp;
+                  EMAIL</span>
                 <a href="tel:+14158904527"
-                  class="font-mono text-xs text-[#C4BAFA] hover:text-[#FFD4EC] transition-colors whitespace-nowrap block">+1 (415) 890-GLAS</a>
+                  class="font-mono text-xs text-[#C4BAFA] hover:text-[#FFD4EC] transition-colors whitespace-nowrap block">+1
+                  (415) 890-GLAS</a>
                 <a href="mailto:atelier@glassblowingstudio.art"
                   class="font-mono text-xs text-[#C4BAFA] hover:text-[#FFD4EC] transition-colors break-words block">atelier@glassblowingstudio.art</a>
               </div>
