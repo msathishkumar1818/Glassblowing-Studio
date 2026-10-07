@@ -832,8 +832,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const filter = tab.getAttribute('data-edition-filter');
 
         monographCards.forEach(card => {
-          const category = card.getAttribute('data-edition-category');
-          if (filter === 'all' || category === filter) {
+          const categoryAttr = (card.getAttribute('data-edition-category') || '').trim();
+          const categories = categoryAttr.split(/\s+/);
+          if (filter === 'all' || categories.includes(filter)) {
             card.style.display = 'flex';
             card.style.opacity = '0';
             card.style.transform = 'translateY(12px)';
