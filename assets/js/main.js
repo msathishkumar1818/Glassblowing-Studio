@@ -83,7 +83,7 @@
     dirButtons.forEach(btn => {
       const label = btn.querySelector('.dir-label');
       if (label) {
-        label.textContent = isRtl ? 'RTL' : 'LTR';
+        label.textContent = isRtl ? 'LTR' : 'RTL';
       }
       if (isRtl) {
         btn.classList.add('is-active');

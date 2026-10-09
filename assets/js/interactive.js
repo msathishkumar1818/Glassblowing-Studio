@@ -617,12 +617,12 @@ document.addEventListener('DOMContentLoaded', () => {
     studioChamberBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         studioChamberBtns.forEach(b => {
-          b.classList.remove('active', 'bg-[#9B91CA]', 'text-[#18131F]', 'shadow-lg', 'border-[#FFD4EC]');
-          b.classList.add('bg-[#18131F]/80', 'text-[#C4BAFA]', 'border-[#9B91CA]/30');
+          b.classList.remove('active', 'bg-[#7C3AED]', 'border-[#FFD4EC]', 'bg-white', 'text-[#0E0A14]', 'bg-[#9B91CA]', 'text-[#18131F]');
+          b.classList.add('bg-[#18131F]/90', 'text-white', 'border-[#9B91CA]/40');
         });
 
-        btn.classList.add('active', 'bg-[#9B91CA]', 'text-[#18131F]', 'shadow-lg', 'border-[#FFD4EC]');
-        btn.classList.remove('bg-[#18131F]/80', 'text-[#C4BAFA]', 'border-[#9B91CA]/30');
+        btn.classList.add('active', 'bg-[#7C3AED]', 'text-white', 'border-[#FFD4EC]');
+        btn.classList.remove('bg-[#18131F]/90', 'border-[#9B91CA]/40');
 
         const img = btn.getAttribute('data-img');
         const name = btn.getAttribute('data-name');

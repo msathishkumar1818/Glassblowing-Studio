@@ -50,7 +50,7 @@
   <link rel="apple-touch-icon" href="assets/images/logo.svg">
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=2.6">
 </head>
 
 <body
@@ -85,34 +85,34 @@
        ======================================================================== -->
   <header
     class="fixed top-0 left-0 right-0 z-50 bg-[#F7F3F7]/90 dark:bg-[#18131F]/90 backdrop-blur-md border-b border-[#9B91CA]/15 dark:border-[#C3A9D0]/10 transition-colors duration-300">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16 flex-nowrap gap-2">
+    <div class="header-container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 flex-nowrap gap-2 sm:gap-4">
 
         <!-- Brand Logo -->
         <a href="index.html"
           class="flex items-center gap-2.5 sm:gap-3 group focus:outline-none shrink-0 whitespace-nowrap"
           aria-label="Glassblowing Studio Home">
           <div
-            class="w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden ring-1 ring-[#9B91CA]/40 shadow-md group-hover:scale-105 group-hover:shadow-[0_0_15px_rgba(155,145,202,0.5)] transition-all shrink-0">
+            class="brand-logo-mark w-9 h-9 sm:w-9 sm:h-9 rounded-full overflow-hidden ring-1 ring-[#9B91CA]/40 shadow-md group-hover:scale-105 group-hover:shadow-[0_0_15px_rgba(155,145,202,0.5)] transition-all shrink-0 flex items-center justify-center">
             <img src="assets/images/logo.svg" alt="Glassblowing Studio Logo" class="w-full h-full object-cover">
           </div>
-          <div class="flex flex-col">
+          <div class="flex flex-col justify-center">
             <span
               class="brand-logo-title font-serif-title font-bold text-sm sm:text-base tracking-widest text-[#18131F] dark:text-[#FFFFFF] uppercase leading-none">GLASSBLOWING</span>
             <span
-              class="brand-logo-sub text-[9px] tracking-[0.25em] text-[#7A6986] dark:text-[#C4BAFA] uppercase font-semibold">STUDIO
+              class="brand-logo-sub text-[9px] tracking-[0.25em] text-[#7A6986] dark:text-[#C4BAFA] uppercase font-semibold mt-0.5">STUDIO
               • ATELIER</span>
           </div>
         </a>
 
         <!-- Desktop Navigation -->
-        <nav class="hidden lg:flex items-center space-x-3 xl:space-x-4 rtl:space-x-reverse shrink-0 whitespace-nowrap"
+        <nav class="hidden lg:flex items-center gap-1 xl:gap-1.5 shrink-0 whitespace-nowrap"
           aria-label="Main Navigation">
 
           <!-- Home with Click Dropdown -->
           <div class="relative">
             <button id="home-dropdown-btn" type="button"
-              class="nav-link flex items-center gap-1 text-[11px] xl:text-xs uppercase tracking-wider font-semibold py-2 transition-colors focus:outline-none whitespace-nowrap"
+              class="nav-link flex items-center gap-1 text-[11px] xl:text-xs uppercase tracking-wider font-semibold transition-colors focus:outline-none whitespace-nowrap"
               aria-expanded="false" aria-haspopup="true">
               <span>HOME</span>
               <svg class="w-3.5 h-3.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -154,25 +154,22 @@
         </nav>
 
         <!-- Right Controls: CTA Button, RTL & Dark Mode (Desktop) -->
-        <div class="hidden lg:flex items-center gap-2.5 sm:gap-3 shrink-0">
-          <!-- RTL Toggle -->
+        <div class="header-controls hidden lg:flex items-center gap-2.5 sm:gap-3 shrink-0">
+          <!-- RTL Toggle with Text -->
           <button type="button" class="dir-toggle-btn rounded-full shadow-sm hover:scale-105 shrink-0"
             title="Toggle RTL/LTR text direction" aria-label="Toggle Direction">
-            <span class="dir-label font-mono font-black text-xs">LTR</span>
+            <span class="dir-label font-bold text-xs">RTL</span>
           </button>
 
-          <!-- Theme Toggle -->
+          <!-- Theme Toggle with Proper Icon -->
           <button type="button" class="theme-toggle-btn rounded-full shadow-sm hover:scale-105 shrink-0"
             title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
-            <svg class="theme-icon-sun hidden w-4 h-4 text-[#FFD4EC]" fill="none" stroke="currentColor"
-              viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M12 3v1m0 16v1m9-9h-1M4 9H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            <svg class="theme-icon-sun hidden w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
             </svg>
-            <svg class="theme-icon-moon w-4 h-4 text-[#221B2B] dark:text-[#C3A9D0]" fill="none" stroke="currentColor"
-              viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            <svg class="theme-icon-moon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
             </svg>
           </button>
 
@@ -189,19 +186,16 @@
         <div class="flex items-center gap-2.5 sm:gap-3 lg:hidden">
           <button type="button" class="dir-toggle-btn rounded-full shadow-sm" title="Toggle RTL/LTR text direction"
             aria-label="Toggle Direction">
-            <span class="dir-label font-mono font-black text-[11px]">LTR</span>
+            <span class="dir-label font-bold text-xs">RTL</span>
           </button>
           <button type="button" class="theme-toggle-btn rounded-full shadow-sm" title="Toggle Dark/Light Mode"
             aria-label="Toggle Theme">
-            <svg class="theme-icon-sun hidden w-4 h-4 text-[#FFD4EC]" fill="none" stroke="currentColor"
-              viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M12 3v1m0 16v1m9-9h-1M4 9H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            <svg class="theme-icon-sun hidden w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
             </svg>
-            <svg class="theme-icon-moon w-4 h-4 text-[#221B2B] dark:text-[#C3A9D0]" fill="none" stroke="currentColor"
-              viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            <svg class="theme-icon-moon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
             </svg>
           </button>
           <button id="mobile-menu-btn" type="button" class="p-2 text-[#3E3245] dark:text-white focus:outline-none"
@@ -781,79 +775,108 @@
          SECTION 5: HIGH-IMPACT CTA SECTION (LAST SECTION AS REQUESTED)
          athula last section cta section irukunum
          ======================================================================== -->
-    <section id="atelier-cta" class="relative py-20 lg:py-28 bg-[#18131F] text-white overflow-hidden dark-section">
-      <!-- Background Molten Atmosphere -->
-      <div class="absolute inset-0 bg-cover bg-center opacity-25 mix-blend-screen scale-105 filter blur-xs"
-        style="background-image: url('assets/images/molten-glass-glow.jpg');"></div>
-      <div class="absolute inset-0 bg-gradient-to-t from-[#18131F] via-[#18131F]/90 to-[#18131F]/80"></div>
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(155,145,202,0.22),transparent_75%)]">
-      </div>
+    <!-- ====================================================================
+         SECTION 08: IMMERSIVE SIGNATURE CRUCIBLE VAULT CTA
+         ==================================================================== -->
+    <section id="atelier-cta" class="atelier-unique-cta-section" data-anim="fade-up">
+      <!-- Ambient Radial Ember Glows -->
+      <div class="absolute top-1/2 left-1/4 -translate-y-1/2 w-[34rem] h-[34rem] bg-[#9B91CA]/15 rounded-full blur-[120px] pointer-events-none"></div>
+      <div class="absolute top-1/2 right-1/4 -translate-y-1/2 w-[34rem] h-[34rem] bg-[#FFD4EC]/10 rounded-full blur-[120px] pointer-events-none"></div>
 
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-8" data-anim="fade-up">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Floating Crucible Vault Card -->
+        <div class="atelier-cta-vault-card">
+          <!-- Top Jewel Hairline -->
+          <div class="atelier-cta-jewel-line"></div>
 
-        <!-- Badge -->
-        <div
-          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#9B91CA]/20 border border-[#9B91CA]/50 text-[#FFD4EC] text-xs font-mono font-bold shadow-lg">
-          <span class="w-2 h-2 rounded-full bg-[#FFD4EC] animate-pulse"></span>
-          <span>STEP INTO THE VULCAN HOT SHOP</span>
-        </div>
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
 
-        <!-- Headline -->
-        <h2
-          class="font-serif-title text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.15]">
-          FEEL THE RADIANT HEAT.<br>
-          <span class="lavender-gradient-text">CREATE OR COMMISSION</span> YOUR LEGACY.
-        </h2>
+            <!-- Left / Main Editorial Callout (7 Cols) -->
+            <div class="lg:col-span-7 space-y-6 text-left rtl:text-right">
+              <!-- Live Telemetry Pill -->
+              <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#9B91CA]/20 border border-[#9B91CA]/40 text-[#FFD4EC] text-xs font-mono font-bold shadow-md">
+                <span class="w-2 h-2 rounded-full bg-[#FFD4EC] animate-ping"></span>
+                <span>STEP INTO THE VULCAN HOT SHOP • EST. 2012</span>
+              </div>
 
-        <!-- Concise Subtitle -->
-        <p class="font-editorial-text text-base sm:text-xl text-[#F3E9F1] max-w-2xl mx-auto leading-relaxed italic"
-          style="color: #FFFFFF !important;">
-          Whether you seek to discover the blowpipe firsthand in our weekend masterclasses or commission a museum
-          centerpiece, our furnaces are blazing.
-        </p>
+              <!-- Master Serif Title -->
+              <h2 class="font-serif-title text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.15]">
+                FEEL THE RADIANT HEAT. <span class="lavender-gradient-text">CREATE OR COMMISSION</span> YOUR LEGACY.
+              </h2>
 
-        <!-- CTA Buttons Group (Primary + Secondary + Contact) -->
-        <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
-          <a href="classes.html" class="btn-primary text-xs sm:text-sm px-8 py-4 shadow-xl hover:shadow-2xl">
-            <span>BOOK A WORKSHOP</span>
-            <svg class="w-4 h-4 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </a>
-          <a href="commissions.html"
-            class="btn-secondary text-xs sm:text-sm px-8 py-4 text-white border-[#C3A9D0]/50 hover:border-[#9B91CA]">
-            <span>COMMISSION BESPOKE ART</span>
-          </a>
-        </div>
+              <!-- Narrative / Promise -->
+              <p class="font-editorial-text text-lg sm:text-xl text-[#F3E9F1] leading-relaxed max-w-xl">
+                Whether you seek to discover the blowpipe firsthand in our weekend masterclasses or commission a museum centerpiece, our furnaces are blazing.
+              </p>
 
-        <!-- Studio Quick Details Bar -->
-        <div
-          class="pt-10 mt-8 border-t border-[#9B91CA]/20 grid grid-cols-1 sm:grid-cols-3 gap-6 text-left sm:text-center text-xs text-[#C3A9D0]">
-          <div class="flex items-center sm:justify-center gap-3">
-            <svg class="w-5 h-5 text-[#C4BAFA] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-            <span>742 Vulcan Foundry Way, San Francisco</span>
+              <!-- Action Triggers -->
+              <div class="flex flex-wrap items-center gap-4 pt-2">
+                <a href="classes.html" class="btn-primary text-xs sm:text-sm px-7 py-3.5 shadow-xl">
+                  <span class="text-white">BOOK A WORKSHOP</span>
+                  <svg class="w-4 h-4 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </a>
+                <a href="commissions.html" class="btn-secondary text-xs sm:text-sm px-7 py-3.5 text-white border-[#C3A9D0]/50 hover:border-[#9B91CA]">
+                  <span class="text-white">COMMISSION BESPOKE ART</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Column: The Atelier Craft Assurance Vault (5 Cols) -->
+            <div class="lg:col-span-5 space-y-3.5">
+              <div class="atelier-assurance-pill">
+                <div class="w-10 h-10 rounded-xl bg-[#FFD4EC]/15 border border-[#FFD4EC]/30 flex items-center justify-center text-[#FFD4EC] shrink-0 font-mono font-bold text-sm">
+                  01
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-white uppercase tracking-wider font-mono">1-on-1 Gaffer Mentorship</h4>
+                  <p class="text-xs text-[#F3E9F1]/85 font-sans mt-0.5 leading-snug">Every guest works directly alongside a master artisan from first gather to pontil separation.</p>
+                </div>
+              </div>
+
+              <div class="atelier-assurance-pill">
+                <div class="w-10 h-10 rounded-xl bg-[#9B91CA]/20 border border-[#9B91CA]/40 flex items-center justify-center text-[#FFD4EC] shrink-0 font-mono font-bold text-sm">
+                  02
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-white uppercase tracking-wider font-mono">2,100°F Continuous Melt</h4>
+                  <p class="text-xs text-[#F3E9F1]/85 font-sans mt-0.5 leading-snug">Optically clear soda-lime crystal formulation melted 24/7 in our gas-oxygen furnace.</p>
+                </div>
+              </div>
+
+              <div class="atelier-assurance-pill">
+                <div class="w-10 h-10 rounded-xl bg-[#FFD4EC]/15 border border-[#FFD4EC]/30 flex items-center justify-center text-[#FFD4EC] shrink-0 font-mono font-bold text-sm">
+                  03
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-white uppercase tracking-wider font-mono">72-Hour Lehr Annealing</h4>
+                  <p class="text-xs text-[#F3E9F1]/85 font-sans mt-0.5 leading-snug">Precision computer-governed cooling curve guarantees molecular structural integrity forever.</p>
+                </div>
+              </div>
+            </div>
+
           </div>
-          <div class="flex items-center sm:justify-center gap-3">
-            <svg class="w-5 h-5 text-[#C4BAFA] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-            </svg>
-            <a href="tel:+14158904527" class="hover:text-white transition-colors">+1 (415) 890-GLAS</a>
-          </div>
-          <div class="flex items-center sm:justify-center gap-3">
-            <svg class="w-5 h-5 text-[#C4BAFA] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <span>Thu–Sun: 10:00 AM – 5:00 PM</span>
-          </div>
-        </div>
 
+          <!-- Bottom Atelier Dispatch Strip -->
+          <div class="mt-10 pt-6 border-t border-[#9B91CA]/20 flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-[#F3E9F1]/80">
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-[#FFD4EC]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              <span>742 Vulcan Foundry Way, San Francisco</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[#10B981] inline-block"></span>
+              <span>Thu–Sun: 10:00 AM – 5:00 PM • Public Viewings Welcome</span>
+            </div>
+            <div>
+              <a href="tel:+14158904527" class="hover:text-white transition-colors text-[#FFD4EC] font-bold">+1 (415) 890-GLAS</a>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
