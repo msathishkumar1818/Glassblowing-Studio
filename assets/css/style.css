@@ -104,6 +104,20 @@ body {
 .dark-section .hero-heading,
 .dark-section .section-heading,
 .dark-section .font-serif-title,
+.atelier-unique-cta-section h1,
+.atelier-unique-cta-section h2,
+.atelier-unique-cta-section h3,
+.atelier-unique-cta-section h4,
+.atelier-unique-cta-section h5,
+.atelier-unique-cta-section h6,
+.atelier-unique-cta-section .font-serif-title,
+.atelier-cta-vault-card h1,
+.atelier-cta-vault-card h2,
+.atelier-cta-vault-card h3,
+.atelier-cta-vault-card h4,
+.atelier-cta-vault-card h5,
+.atelier-cta-vault-card h6,
+.atelier-cta-vault-card .font-serif-title,
 .dark-card h1,
 .dark-card h2,
 .dark-card h3,
@@ -133,6 +147,12 @@ footer h6 {
 .dark-section li,
 .dark-section blockquote,
 .dark-section .font-editorial-text,
+.atelier-unique-cta-section p,
+.atelier-unique-cta-section li,
+.atelier-unique-cta-section .font-editorial-text,
+.atelier-cta-vault-card p,
+.atelier-cta-vault-card li,
+.atelier-cta-vault-card .font-editorial-text,
 .dark-card p,
 .dark-card li,
 .dark-card .font-editorial-text,
@@ -215,6 +235,8 @@ html:not(.dark) .section-eyebrow {
 /* Buttons in dark sections */
 .hero-dark .btn-secondary,
 .dark-section .btn-secondary,
+.atelier-unique-cta-section .btn-secondary,
+.atelier-cta-vault-card .btn-secondary,
 .dark-card .btn-secondary,
 #enquiry-form .btn-secondary,
 footer .btn-secondary {
@@ -224,6 +246,8 @@ footer .btn-secondary {
 
 .hero-dark .btn-secondary span,
 .dark-section .btn-secondary span,
+.atelier-unique-cta-section .btn-secondary span,
+.atelier-cta-vault-card .btn-secondary span,
 .dark-card .btn-secondary span,
 #enquiry-form .btn-secondary span,
 footer .btn-secondary span {
@@ -232,6 +256,8 @@ footer .btn-secondary span {
 
 .hero-dark .btn-secondary:hover,
 .dark-section .btn-secondary:hover,
+.atelier-unique-cta-section .btn-secondary:hover,
+.atelier-cta-vault-card .btn-secondary:hover,
 .dark-card .btn-secondary:hover,
 #enquiry-form .btn-secondary:hover,
 footer .btn-secondary:hover {
@@ -242,6 +268,8 @@ footer .btn-secondary:hover {
 
 .hero-dark .btn-secondary:hover span,
 .dark-section .btn-secondary:hover span,
+.atelier-unique-cta-section .btn-secondary:hover span,
+.atelier-cta-vault-card .btn-secondary:hover span,
 .dark-card .btn-secondary:hover span,
 #enquiry-form .btn-secondary:hover span,
 footer .btn-secondary:hover span {
@@ -323,38 +351,38 @@ html:not(.dark) body {
 }
 
 /* Light mode headings on light surfaces */
-html:not(.dark) h1:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(#enquiry-form *):not(.hero-overlay-card *):not(.thermal-overlay-badge *):not(.floating-overlay-card *):not(#thermal-slider-container *),
-html:not(.dark) h2:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(#enquiry-form *):not(.hero-overlay-card *):not(.thermal-overlay-badge *):not(.floating-overlay-card *):not(#thermal-slider-container *),
-html:not(.dark) h3:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(#enquiry-form *):not(.hero-overlay-card *):not(.thermal-overlay-badge *):not(.floating-overlay-card *):not(#thermal-slider-container *),
-html:not(.dark) h4:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(#enquiry-form *):not(.hero-overlay-card *):not(.thermal-overlay-badge *):not(.floating-overlay-card *):not(#thermal-slider-container *),
-html:not(.dark) h5:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(#enquiry-form *):not(.hero-overlay-card *):not(.thermal-overlay-badge *):not(.floating-overlay-card *):not(#thermal-slider-container *),
-html:not(.dark) h6:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(#enquiry-form *):not(.hero-overlay-card *):not(.thermal-overlay-badge *):not(.floating-overlay-card *):not(#thermal-slider-container *),
-html:not(.dark) .hero-heading:not(.dark-section *):not(.hero-dark *),
-html:not(.dark) .section-heading:not(.dark-section *):not(.hero-dark *),
-html:not(.dark) .font-serif-title:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(#enquiry-form *):not(.hero-overlay-card *):not(.thermal-overlay-badge *):not(.floating-overlay-card *):not(#thermal-slider-container *) {
+html:not(.dark) h1:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(.atelier-unique-cta-section *):not(.atelier-cta-vault-card *):not(footer *):not(#enquiry-form *):not(.hero-overlay-card *):not(.thermal-overlay-badge *):not(.floating-overlay-card *):not(#thermal-slider-container *),
+html:not(.dark) h2:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(.atelier-unique-cta-section *):not(.atelier-cta-vault-card *):not(footer *):not(#enquiry-form *):not(.hero-overlay-card *):not(.thermal-overlay-badge *):not(.floating-overlay-card *):not(#thermal-slider-container *),
+html:not(.dark) h3:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(.atelier-unique-cta-section *):not(.atelier-cta-vault-card *):not(footer *):not(#enquiry-form *):not(.hero-overlay-card *):not(.thermal-overlay-badge *):not(.floating-overlay-card *):not(#thermal-slider-container *),
+html:not(.dark) h4:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(.atelier-unique-cta-section *):not(.atelier-cta-vault-card *):not(footer *):not(#enquiry-form *):not(.hero-overlay-card *):not(.thermal-overlay-badge *):not(.floating-overlay-card *):not(#thermal-slider-container *),
+html:not(.dark) h5:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(.atelier-unique-cta-section *):not(.atelier-cta-vault-card *):not(footer *):not(#enquiry-form *):not(.hero-overlay-card *):not(.thermal-overlay-badge *):not(.floating-overlay-card *):not(#thermal-slider-container *),
+html:not(.dark) h6:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(.atelier-unique-cta-section *):not(.atelier-cta-vault-card *):not(footer *):not(#enquiry-form *):not(.hero-overlay-card *):not(.thermal-overlay-badge *):not(.floating-overlay-card *):not(#thermal-slider-container *),
+html:not(.dark) .hero-heading:not(.dark-section *):not(.hero-dark *):not(.atelier-unique-cta-section *):not(.atelier-cta-vault-card *),
+html:not(.dark) .section-heading:not(.dark-section *):not(.hero-dark *):not(.atelier-unique-cta-section *):not(.atelier-cta-vault-card *),
+html:not(.dark) .font-serif-title:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(.atelier-unique-cta-section *):not(.atelier-cta-vault-card *):not(footer *):not(#enquiry-form *):not(.hero-overlay-card *):not(.thermal-overlay-badge *):not(.floating-overlay-card *):not(#thermal-slider-container *) {
   color: #18131F !important;
   font-weight: 700 !important;
   text-shadow: none !important;
 }
 
 /* Light mode body paragraphs, quotes, and labels strictly on light surfaces */
-html:not(.dark) p:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(#enquiry-form *):not(.hero-overlay-card *):not(.thermal-overlay-badge *):not(.floating-overlay-card *):not(#thermal-slider-container *),
-html:not(.dark) li:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(#enquiry-form *):not(.hero-overlay-card *):not(.thermal-overlay-badge *):not(.floating-overlay-card *):not(#thermal-slider-container *),
-html:not(.dark) label:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(#enquiry-form *):not(.hero-overlay-card *):not(.thermal-overlay-badge *):not(.floating-overlay-card *):not(#thermal-slider-container *),
-html:not(.dark) .font-editorial-text:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(#enquiry-form *):not(.hero-overlay-card *):not(.thermal-overlay-badge *):not(.floating-overlay-card *):not(#thermal-slider-container *) {
+html:not(.dark) p:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(.atelier-unique-cta-section *):not(.atelier-cta-vault-card *):not(footer *):not(#enquiry-form *):not(.hero-overlay-card *):not(.thermal-overlay-badge *):not(.floating-overlay-card *):not(#thermal-slider-container *),
+html:not(.dark) li:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(.atelier-unique-cta-section *):not(.atelier-cta-vault-card *):not(footer *):not(#enquiry-form *):not(.hero-overlay-card *):not(.thermal-overlay-badge *):not(.floating-overlay-card *):not(#thermal-slider-container *),
+html:not(.dark) label:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(.atelier-unique-cta-section *):not(.atelier-cta-vault-card *):not(footer *):not(#enquiry-form *):not(.hero-overlay-card *):not(.thermal-overlay-badge *):not(.floating-overlay-card *):not(#thermal-slider-container *),
+html:not(.dark) .font-editorial-text:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(.atelier-unique-cta-section *):not(.atelier-cta-vault-card *):not(footer *):not(#enquiry-form *):not(.hero-overlay-card *):not(.thermal-overlay-badge *):not(.floating-overlay-card *):not(#thermal-slider-container *) {
   color: #221B2B !important;
   font-weight: 450;
   line-height: 1.65;
 }
 
 /* Badges / Status Pills on light surfaces */
-html:not(.dark) .rounded-full[class*="border"]:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(#enquiry-form *):not(.hero-overlay-card *):not(.image-overlay-pill):not(.image-overlay-pill *):not([class*="aspect-"] *):not(.monograph-edition-card *) {
+html:not(.dark) .rounded-full[class*="border"]:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(.atelier-unique-cta-section *):not(.atelier-cta-vault-card *):not(footer *):not(#enquiry-form *):not(.hero-overlay-card *):not(.image-overlay-pill):not(.image-overlay-pill *):not([class*="aspect-"] *):not(.monograph-edition-card *) {
   color: #4D2E5C !important;
   background-color: rgba(155, 145, 202, 0.18) !important;
   border-color: rgba(155, 145, 202, 0.45) !important;
 }
 
-html:not(.dark) .rounded-full[class*="border"]:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *):not(#enquiry-form *):not(.hero-overlay-card *):not(.image-overlay-pill):not(.image-overlay-pill *):not([class*="aspect-"] *):not(.monograph-edition-card *) span {
+html:not(.dark) .rounded-full[class*="border"]:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(.atelier-unique-cta-section *):not(.atelier-cta-vault-card *):not(footer *):not(#enquiry-form *):not(.hero-overlay-card *):not(.image-overlay-pill):not(.image-overlay-pill *):not([class*="aspect-"] *):not(.monograph-edition-card *) span {
   color: #4D2E5C !important;
   font-weight: 700 !important;
 }
@@ -1474,7 +1502,7 @@ html[dir="rtl"] #mobile-drawer {
    ========================================================================== */
 
 /* Light Mode Gradient Text (Rich Deep Mauve & Lavender Contrast on White) */
-html:not(.dark) .lavender-gradient-text:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *) {
+html:not(.dark) .lavender-gradient-text:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(.atelier-unique-cta-section *):not(.atelier-cta-vault-card *):not(footer *) {
   background: linear-gradient(135deg, #3A204C 0%, #6E497F 50%, #9B91CA 100%) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
@@ -1483,7 +1511,7 @@ html:not(.dark) .lavender-gradient-text:not(.dark-section *):not(.hero-dark *):n
   filter: none !important;
 }
 
-html:not(.dark) .rose-gradient-text:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *) {
+html:not(.dark) .rose-gradient-text:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(.atelier-unique-cta-section *):not(.atelier-cta-vault-card *):not(footer *) {
   background: linear-gradient(135deg, #5C1E3A 0%, #8C3E63 50%, #B992A5 100%) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
@@ -1492,7 +1520,7 @@ html:not(.dark) .rose-gradient-text:not(.dark-section *):not(.hero-dark *):not(.
   filter: none !important;
 }
 
-html:not(.dark) .mauve-gradient-text:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *) {
+html:not(.dark) .mauve-gradient-text:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(.atelier-unique-cta-section *):not(.atelier-cta-vault-card *):not(footer *) {
   background: linear-gradient(135deg, #2D1A3B 0%, #5A396B 50%, #7A6986 100%) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
@@ -1501,7 +1529,7 @@ html:not(.dark) .mauve-gradient-text:not(.dark-section *):not(.hero-dark *):not(
   filter: none !important;
 }
 
-html:not(.dark) .fire-gradient-text:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(footer *) {
+html:not(.dark) .fire-gradient-text:not(.dark-section *):not(.hero-dark *):not(.dark-card *):not(.atelier-unique-cta-section *):not(.atelier-cta-vault-card *):not(footer *) {
   background: linear-gradient(135deg, #3A204C 0%, #6E497F 50%, #9B91CA 100%) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
@@ -1514,6 +1542,8 @@ html:not(.dark) .fire-gradient-text:not(.dark-section *):not(.hero-dark *):not(.
 .hero-dark .lavender-gradient-text,
 .dark-section .lavender-gradient-text,
 .dark-card .lavender-gradient-text,
+.atelier-unique-cta-section .lavender-gradient-text,
+.atelier-cta-vault-card .lavender-gradient-text,
 footer .lavender-gradient-text,
 html.dark .lavender-gradient-text {
   background: linear-gradient(135deg, #C4BAFA 0%, #E2D2ED 40%, #FFFFFF 100%) !important;
@@ -1527,6 +1557,8 @@ html.dark .lavender-gradient-text {
 .hero-dark .rose-gradient-text,
 .dark-section .rose-gradient-text,
 .dark-card .rose-gradient-text,
+.atelier-unique-cta-section .rose-gradient-text,
+.atelier-cta-vault-card .rose-gradient-text,
 footer .rose-gradient-text,
 html.dark .rose-gradient-text {
   background: linear-gradient(135deg, #DDB8FA 0%, #FFD4EC 50%, #FFFFFF 100%) !important;
@@ -1540,6 +1572,8 @@ html.dark .rose-gradient-text {
 .hero-dark .mauve-gradient-text,
 .dark-section .mauve-gradient-text,
 .dark-card .mauve-gradient-text,
+.atelier-unique-cta-section .mauve-gradient-text,
+.atelier-cta-vault-card .mauve-gradient-text,
 footer .mauve-gradient-text,
 html.dark .mauve-gradient-text {
   background: linear-gradient(135deg, #AB95CF 0%, #C4BAFA 50%, #FFFFFF 100%) !important;
@@ -1553,6 +1587,17 @@ html.dark .mauve-gradient-text {
 .hero-dark .fire-gradient-text,
 .dark-section .fire-gradient-text,
 .dark-card .fire-gradient-text,
+.atelier-unique-cta-section .fire-gradient-text,
+.atelier-cta-vault-card .fire-gradient-text,
+footer .fire-gradient-text,
+html.dark .fire-gradient-text {
+  background: linear-gradient(135deg, #F97316 0%, #FBBF24 50%, #FEF08A 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+  filter: drop-shadow(0 2px 8px rgba(249, 115, 22, 0.35)) !important;
+}
 footer .fire-gradient-text,
 html.dark .fire-gradient-text {
   background: linear-gradient(135deg, #C4BAFA 0%, #E2D2ED 40%, #FFFFFF 100%) !important;
@@ -2534,16 +2579,179 @@ html.dark .studio-chamber-tab-btn.active span {
   gap: 0.875rem;
   padding: 1rem 1.15rem;
   border-radius: 1rem;
-  background: rgba(24, 19, 31, 0.65);
-  border: 1px solid rgba(155, 145, 202, 0.25);
+  background: rgba(24, 19, 31, 0.75) !important;
+  border: 1px solid rgba(155, 145, 202, 0.3) !important;
   transition: all 0.3s ease;
 }
 
 .atelier-assurance-pill:hover {
-  border-color: rgba(255, 212, 236, 0.5);
-  background: rgba(34, 27, 43, 0.85);
+  border-color: rgba(255, 212, 236, 0.5) !important;
+  background: rgba(34, 27, 43, 0.92) !important;
   transform: translateY(-2px);
 }
+
+/* --------------------------------------------------------------------------
+   ATELIER UNIQUE CTA SECTION: EXPLICIT HIGH-CONTRAST LIGHT & DARK RULES
+   Ensures 100% crystal-clear visibility on the obsidian crucible card
+   -------------------------------------------------------------------------- */
+.atelier-unique-cta-section h1,
+.atelier-unique-cta-section h2,
+.atelier-unique-cta-section h3,
+.atelier-unique-cta-section h4,
+.atelier-unique-cta-section .font-serif-title,
+.atelier-cta-vault-card h1,
+.atelier-cta-vault-card h2,
+.atelier-cta-vault-card h3,
+.atelier-cta-vault-card h4,
+.atelier-cta-vault-card .font-serif-title,
+html:not(.dark) .atelier-unique-cta-section h1,
+html:not(.dark) .atelier-unique-cta-section h2,
+html:not(.dark) .atelier-unique-cta-section h3,
+html:not(.dark) .atelier-unique-cta-section h4,
+html:not(.dark) .atelier-unique-cta-section .font-serif-title,
+html:not(.dark) .atelier-cta-vault-card h1,
+html:not(.dark) .atelier-cta-vault-card h2,
+html:not(.dark) .atelier-cta-vault-card h3,
+html:not(.dark) .atelier-cta-vault-card h4,
+html:not(.dark) .atelier-cta-vault-card .font-serif-title {
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6) !important;
+}
+
+.atelier-unique-cta-section p,
+.atelier-unique-cta-section .font-editorial-text,
+.atelier-cta-vault-card p,
+.atelier-cta-vault-card .font-editorial-text,
+html:not(.dark) .atelier-unique-cta-section p,
+html:not(.dark) .atelier-unique-cta-section .font-editorial-text,
+html:not(.dark) .atelier-cta-vault-card p,
+html:not(.dark) .atelier-cta-vault-card .font-editorial-text {
+  color: #F3E9F1 !important;
+  font-weight: 450 !important;
+}
+
+/* Status Pill / Live Telemetry Badge inside CTA Vault */
+.atelier-unique-cta-section .rounded-full[class*="border"],
+.atelier-cta-vault-card .rounded-full[class*="border"],
+html:not(.dark) .atelier-unique-cta-section .rounded-full[class*="border"],
+html:not(.dark) .atelier-cta-vault-card .rounded-full[class*="border"] {
+  background-color: rgba(155, 145, 202, 0.22) !important;
+  border-color: rgba(155, 145, 202, 0.5) !important;
+  color: #FFD4EC !important;
+}
+
+.atelier-unique-cta-section .rounded-full[class*="border"] span,
+.atelier-cta-vault-card .rounded-full[class*="border"] span,
+html:not(.dark) .atelier-unique-cta-section .rounded-full[class*="border"] span,
+html:not(.dark) .atelier-cta-vault-card .rounded-full[class*="border"] span {
+  color: #FFD4EC !important;
+  font-weight: 700 !important;
+}
+
+/* Assurance Pillars Right Column */
+.atelier-assurance-pill h4,
+html:not(.dark) .atelier-assurance-pill h4 {
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+}
+
+.atelier-assurance-pill p,
+html:not(.dark) .atelier-assurance-pill p {
+  color: rgba(243, 233, 241, 0.92) !important;
+  font-weight: 400 !important;
+}
+
+.atelier-assurance-pill > div:first-child,
+html:not(.dark) .atelier-assurance-pill > div:first-child {
+  color: #FFD4EC !important;
+  font-weight: 800 !important;
+}
+
+/* Buttons in CTA Section */
+.atelier-unique-cta-section .btn-secondary,
+.atelier-cta-vault-card .btn-secondary,
+html:not(.dark) .atelier-unique-cta-section .btn-secondary,
+html:not(.dark) .atelier-cta-vault-card .btn-secondary {
+  color: #FFFFFF !important;
+  border-color: rgba(195, 169, 208, 0.5) !important;
+  background-color: transparent !important;
+}
+
+.atelier-unique-cta-section .btn-secondary span,
+.atelier-cta-vault-card .btn-secondary span,
+html:not(.dark) .atelier-unique-cta-section .btn-secondary span,
+html:not(.dark) .atelier-cta-vault-card .btn-secondary span {
+  color: #FFFFFF !important;
+}
+
+.atelier-unique-cta-section .btn-secondary:hover,
+.atelier-cta-vault-card .btn-secondary:hover,
+html:not(.dark) .atelier-unique-cta-section .btn-secondary:hover,
+html:not(.dark) .atelier-cta-vault-card .btn-secondary:hover {
+  color: #FFD4EC !important;
+  border-color: #9B91CA !important;
+  background-color: rgba(155, 145, 202, 0.2) !important;
+}
+
+.atelier-unique-cta-section .btn-secondary:hover span,
+.atelier-cta-vault-card .btn-secondary:hover span,
+html:not(.dark) .atelier-unique-cta-section .btn-secondary:hover span,
+html:not(.dark) .atelier-cta-vault-card .btn-secondary:hover span {
+  color: #FFD4EC !important;
+}
+
+/* Bottom Dispatch Bar in CTA Card */
+.atelier-cta-vault-card div[class*="border-t"],
+.atelier-cta-vault-card div[class*="border-t"] span,
+.atelier-cta-vault-card div[class*="border-t"] a,
+html:not(.dark) .atelier-cta-vault-card div[class*="border-t"],
+html:not(.dark) .atelier-cta-vault-card div[class*="border-t"] span,
+html:not(.dark) .atelier-cta-vault-card div[class*="border-t"] a {
+  color: #F3E9F1 !important;
+}
+
+/* ==========================================================================
+   ATELIER CTA ACTION BUTTONS: UNIFORM EQUAL WIDTH & RIGHT ALIGNMENT
+   Ensures stacked CTA buttons have identical width and flush right alignment
+   ========================================================================== */
+.atelier-cta-actions {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.875rem !important;
+  width: 100% !important;
+  max-width: 380px !important;
+  padding-top: 0.5rem !important;
+}
+
+.atelier-cta-actions .btn-primary,
+.atelier-cta-actions .btn-secondary {
+  width: 100% !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
+  padding: 0.875rem 1.5rem !important;
+  border-radius: 0.75rem !important;
+  margin: 0 !important;
+}
+
+@media (min-width: 1280px) {
+  .atelier-cta-actions {
+    flex-direction: row !important;
+    align-items: center !important;
+    max-width: none !important;
+    width: auto !important;
+  }
+
+  .atelier-cta-actions .btn-primary,
+  .atelier-cta-actions .btn-secondary {
+    width: auto !important;
+    min-width: 220px !important;
+  }
+}
+
 
 
 /* ==========================================================================
